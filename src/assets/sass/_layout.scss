@@ -1,0 +1,22 @@
+@use "_var.scss";
+
+/*MISE EN PLACE*/
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  background-color: var(--color-black);
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}

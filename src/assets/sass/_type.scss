@@ -1,3 +1,11 @@
-h1 {
-  font-size: 3px;
+@use "_var.scss";
+
+.title {
+  font-family: "Barlow Condensed", sans-serif;
+}
+.title--next {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--color-dark-gray);
 }
