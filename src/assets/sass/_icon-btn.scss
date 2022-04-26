@@ -11,38 +11,41 @@
   align-items: center;
   transition: 0.3s cubic-bezier(0.64, 0, 0.78, 0);
   cursor: pointer;
+  position: absolute;
+  z-index: 10;
+
+  &:hover,
+  &:focus {
+    background-color: white;
+    transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &--sound {
+    left: 1rem;
+    bottom: 2rem;
+  }
+  &--next {
+    right: 1rem;
+    bottom: 2rem;
+
+    &:hover .arrow--next {
+      transform: translateX(1px);
+    }
+  }
+  &--prev {
+    right: 4rem;
+    bottom: 2rem;
+
+    &:hover .arrow--prev {
+      transform: translateX(-1px);
+    }
+  }
 }
 .sound {
   width: 16px;
   height: 16px;
 }
-.icon:hover,
-.icon:focus {
-  background-color: white;
-  transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
 .arrow {
   width: 16px;
   transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.icon--next:hover .arrow--next {
-  transform: translateX(1px);
-}
-.icon--previous:hover .arrow--previous {
-  transform: translateX(-1px);
-}
-.icon {
-  position: absolute;
-}
-.icon--sound {
-  left: 1rem;
-  bottom: 2rem;
-}
-.icon--next {
-  right: 1rem;
-  bottom: 2rem;
-}
-.icon--previous {
-  right: 4rem;
-  bottom: 2rem;
 }
