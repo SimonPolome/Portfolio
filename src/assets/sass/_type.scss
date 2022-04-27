@@ -76,7 +76,15 @@ p {
     color: var(--color-white);
   }
 }
-.text--small {
-  font-size: 1rem;
+.text {
   line-height: 140%;
+  font-size: 1rem;
+
+  &--small {
+    font-weight: 400;
+  }
+
+  &--big {
+    font-weight: 700;
+  }
 }

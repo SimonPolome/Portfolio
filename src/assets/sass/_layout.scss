@@ -18,6 +18,19 @@ main {
   width: 100%;
   background-image: url(../images/fond.png);
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  &--show {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
 
   &__container {
     height: 100%;
@@ -33,10 +46,14 @@ main {
     &--end {
       justify-content: end;
     }
+
+    &--between {
+      justify-content: space-between;
+    }
   }
 
   &--equipe {
-    background-image: url(../images/équipe.png);
+    background-image: url(../images/equipe.png);
   }
 
   &--equipechap {
@@ -45,26 +62,50 @@ main {
         rgba(26, 26, 26, 0.8),
         rgba(26, 26, 26, 0.8)
       ),
-      url(../images/équipe.png);
+      url(../images/equipe.png);
     background-size: cover;
+  }
+
+  &--avion {
+    background-image: url(../images/avion.png);
+  }
+
+  &--nuages {
+    background-image: url(../images/nuages.png);
+  }
+
+  &--montagnes {
+    background-image: url(../images/montagnes.png);
+  }
+
+  &--reveil {
+    background-image: url(../images/reveil.png);
+  }
+
+  &--reveilchap {
+    background: linear-gradient(
+        0deg,
+        rgba(26, 26, 26, 0.8),
+        rgba(26, 26, 26, 0.8)
+      ),
+      url(../images/reveil.png);
+    background-size: cover;
+  }
+
+  &--survie {
+    background-image: url(../images/survie.png);
+  }
+
+  &--groupe {
+    background-image: url(../images/groupe.png);
+  }
+
+  &--astuces {
+    background-image: url(../images/astuces.png);
   }
 }
 .bulle {
   background-color: var(--color-white);
   border: 1px solid var(--color-dark-gray);
   padding: 1rem;
-}
-.page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.page--show {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
 }
