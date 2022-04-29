@@ -88,3 +88,59 @@ p {
     font-weight: 700;
   }
 }
+
+
+@media (min-width: 768px){
+.title {
+  font-family: "Barlow Condensed", sans-serif;
+
+  &--big {
+    font-size: 3rem;
+  }
+  &--medium {
+    font-size: 1.75rem;
+  }
+  &--chapitre {
+    font-size: 1.5rem;
+  }
+
+  &--numero {
+    font-size: 6rem;
+
+    &::after {
+      width: 8rem;
+      height: 4px;
+    }
+  }
+
+  &--intro {
+    align-self: center;
+
+    &::before,
+    &::after {
+      height: 4px;
+    }
+    &::before {
+      top: -2rem;
+    }
+    &::after {
+      bottom: -3rem;
+    }
+  }
+}
+.text {
+  line-height: 140%;
+  font-size: 1rem;
+
+  &--small {
+    font-weight: 400;
+  }
+
+  &--big {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+
+}
