@@ -90,12 +90,13 @@ p {
     font-weight: 700;
   }
 }
-
+.typo--mort{
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
 
 @media (min-width: 768px){
 .title {
-  font-family: "Barlow Condensed", sans-serif;
-
   &--big {
     font-size: 3rem;
   }
@@ -124,7 +125,7 @@ p {
       height: 3px;
     }
     &::before {
-      top: -2rem;
+      top: -2.5rem;
     }
     &::after {
       bottom: -3rem;
@@ -134,6 +135,33 @@ p {
 .text {
   &--big {
     font-size: 20px;
+  }
+}
+}
+
+@media (min-width: 1440px){
+.title {
+  &--big {
+    font-size: 3.5rem;
+  }
+  &--medium {
+    font-size: 2rem;
+  }
+  &--chapitre {
+    font-size: 1.5rem;
+    margin-top: 8rem;
+    margin-bottom: 1.5rem;
+  }
+  &--numero::after {
+    bottom: -1.5rem;
+  }
+}
+.text {
+  &--small {
+    font-size: 18px;
+  }
+  &--big {
+    font-size: 1.5rem;
   }
 }
 }
