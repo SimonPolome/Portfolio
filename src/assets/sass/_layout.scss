@@ -115,6 +115,11 @@ main {
     background-image: url(../images/astuces.png);
   }
 }
+.flex--column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .bulle {
   background-color: var(--color-white);  
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -141,6 +146,9 @@ main {
 }
 .bulle {
   padding: 2rem;
+}
+.tgrid17 {
+  grid-column: 1/7;
 }
 .tgrid26 {
   grid-column: 2/6;  

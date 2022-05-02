@@ -28,9 +28,3 @@ function prev(){
         elLast.classList.add("page--show");
     }    
 };
-
-const slider = document.querySelector("main");
-const hammerSlider = new Hammer(slider);
-
-hammerSlider.on("swipeleft", next);
-hammerSlider.on("swiperight", prev);

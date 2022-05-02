@@ -53,8 +53,8 @@
 
 @media (min-width: 768px){
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
 
   &--sound {
     left: 2rem;
@@ -65,10 +65,25 @@
     bottom: 2.5rem;
   }
   &--prev {
-    right: 5.5rem;
+    right: 6rem;
     bottom: 2.5rem;
   }
 }
-
-
 }
+
+@media (min-width: 1440px){
+  .icon {  
+    &--sound {
+      left: 3rem;
+      bottom: 2.5rem;
+    }
+    &--next {
+      right: 3rem;
+      bottom: 2.5rem;
+    }
+    &--prev {
+      right: 7rem;
+      bottom: 2.5rem;
+    }
+  }
+  }
