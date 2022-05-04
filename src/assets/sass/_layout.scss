@@ -72,6 +72,12 @@ main {
     background-position: center;
   }
 
+  &--choix,
+  &--mort,
+  &--fin {
+    z-index: 30;
+  }
+
   &--choix1 {
     background: linear-gradient(
       0deg,
@@ -81,6 +87,11 @@ main {
     url(../images/choix-avion.png);
   background-size: cover;
   background-position: center;
+  }
+
+  &--avionvie,
+  &--avionmort {
+    z-index: 20;
   }
 
   &--avion {
