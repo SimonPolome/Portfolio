@@ -28,3 +28,32 @@ function prev(){
         elLast.classList.add("page--show");
     }    
 };
+
+
+const circleav = document.querySelector(".circle--avant");
+const circlear = document.querySelector(".circle--arriere");
+const pagechoix = document.querySelector(".page--choix");
+const pageavionvie = document.querySelector(".page--avionvie");
+const pageavionmort = document.querySelector(".page--avionmort");
+
+
+circleav.addEventListener("click", () => {
+    pagechoix.classList.remove('page--show');
+    pageavionvie.classList.add('page--show');    
+});
+
+circlear.addEventListener("click", () => {
+    pagechoix.classList.remove('page--show');
+    pageavionmort.classList.add('page--show');    
+});
+
+
+const recommencer = document.querySelector(".btn--recommencer");
+const pageequipe = document.querySelector(".page--equipechap");
+const pagemort = document.querySelector(".page--mort");
+
+recommencer.addEventListener("click", () => {
+    pagemort.classList.remove('page--show');
+    pageequipe.classList.add('page--show');    
+});
+

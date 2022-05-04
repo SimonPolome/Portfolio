@@ -72,6 +72,17 @@ main {
     background-position: center;
   }
 
+  &--choix1 {
+    background: linear-gradient(
+      0deg,
+      rgba(26, 26, 26, 0.8),
+      rgba(26, 26, 26, 0.8)
+    ),
+    url(../images/choix-avion.png);
+  background-size: cover;
+  background-position: center;
+  }
+
   &--avion {
     background-image: url(../images/avion.png);
   }
@@ -125,6 +136,17 @@ main {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 2px;
   padding: 1.5rem;
+}
+.marginb1 {
+  margin-bottom: 1rem;
+}
+.marginb4 {
+  margin-bottom: 4rem;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px){
