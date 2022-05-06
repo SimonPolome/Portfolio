@@ -47,13 +47,36 @@ circlear.addEventListener("click", () => {
     pageavionmort.classList.add('page--show');    
 });
 
-
-const recommencer = document.querySelector(".btn--recommencer");
+const commencer = document.querySelector(".btn--commencer");
+const pageintro = document.querySelector(".page--intro");
+const continuer = document.querySelector(".btn--continuer");
 const pageequipe = document.querySelector(".page--equipechap");
 const pagemort = document.querySelector(".page--mort");
 
-recommencer.addEventListener("click", () => {
-    pagemort.classList.remove('page--show');
-    pageequipe.classList.add('page--show');    
+commencer.addEventListener("click", () => {
+    pageintro.classList.remove('page--show');
+    pageequipe.classList.add('page--show');     
 });
 
+continuer.addEventListener("click", () => {
+    pagemort.classList.remove('page--show');
+    pagechoix.classList.add('page--show');    
+});
+
+
+
+var soundBtn = document.querySelector(".icon--sound");
+var audio = document.querySelector(".audio");
+var count = 0;
+
+soundBtn.addEventListener("click", playPause)
+
+function playPause(){
+    if(count == 0){
+        count = 1;
+        console.log("salut");
+    }else{
+        count = 0;
+        console.log("yo");
+    }
+}

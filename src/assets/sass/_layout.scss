@@ -34,7 +34,14 @@ main {
   }
 
   &--intro {
-    background: var(--color-black);
+    background: linear-gradient(
+      0deg,
+      rgba(26, 26, 26, 0.9),
+      rgba(26, 26, 26, 0.9)
+    ),
+    url(../images/montagnes.png);
+  background-size: cover;
+  background-position: center;
   }
 
   &__container {
@@ -64,34 +71,36 @@ main {
   &--equipechap {
     background: linear-gradient(
         0deg,
-        rgba(26, 26, 26, 0.8),
-        rgba(26, 26, 26, 0.8)
+        rgba(26, 26, 26, 0.9),
+        rgba(26, 26, 26, 0.9)
       ),
       url(../images/equipe.png);
     background-size: cover;
     background-position: center;
+    z-index: 20;
   }
 
   &--choix,
   &--mort,
-  &--fin {
+  &--fin,
+  &--intro {
     z-index: 30;
-  }
-
-  &--choix1 {
-    background: linear-gradient(
-      0deg,
-      rgba(26, 26, 26, 0.8),
-      rgba(26, 26, 26, 0.8)
-    ),
-    url(../images/choix-avion.png);
-  background-size: cover;
-  background-position: center;
   }
 
   &--avionvie,
   &--avionmort {
     z-index: 20;
+  }
+
+  &--choix1 {
+    background: linear-gradient(
+      0deg,
+      rgba(26, 26, 26, 0.9),
+      rgba(26, 26, 26, 0.9)
+    ),
+    url(../images/choix-avion.png);
+  background-size: cover;
+  background-position: center;
   }
 
   &--avion {
@@ -117,8 +126,8 @@ main {
   &--reveilchap {
     background: linear-gradient(
         0deg,
-        rgba(26, 26, 26, 0.8),
-        rgba(26, 26, 26, 0.8)
+        rgba(26, 26, 26, 0.9),
+        rgba(26, 26, 26, 0.9)
       ),
       url(../images/reveil.png);
     background-size: cover;

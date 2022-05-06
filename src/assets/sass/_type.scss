@@ -53,8 +53,8 @@ p {
 
   &--intro {
     position: relative;
+    margin-bottom: 4rem;
 
-    &::before,
     &::after {
       display: block;
       content: "";
@@ -64,12 +64,7 @@ p {
       background: var(--color-white);
       position: absolute;
       left: 0;
-    }
-    &::before {
-      top: -1rem;
-    }
-    &::after {
-      bottom: -1.5rem;
+      bottom: -2rem;
     }
   }
 
@@ -100,6 +95,9 @@ p {
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
+  margin-top: 3rem;
+  background-color: var(--color-white);
+  padding: 2px;
 
   :hover,
   :focus{
@@ -107,11 +105,6 @@ p {
   }
   :active {
     background-color: black;
-  }
-  &--recommencer {
-    margin-top: 3rem;
-    background-color: var(--color-white);
-    padding: 2px;
   }
   &__cadre{
     background-color: var(--color-black);
@@ -145,15 +138,8 @@ p {
   }
 
   &--intro {
-    &::before,
     &::after {
       height: 3px;
-    }
-    &::before {
-      top: -2.5rem;
-    }
-    &::after {
-      bottom: -3rem;
     }
   }
 }
@@ -165,10 +151,8 @@ p {
 .btn {
 font-size: 1.25rem;
 letter-spacing: 2px;
+padding: 4px;
 
-  &--recommencer {
-    padding: 4px;
-  }
   &__cadre{
     padding: 1rem 2rem;
     border-radius: 0 0 25px 25px;
