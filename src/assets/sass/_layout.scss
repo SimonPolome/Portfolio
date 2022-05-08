@@ -50,6 +50,7 @@ main {
     padding: 2rem 1rem 6rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     &--center {
       justify-content: center;

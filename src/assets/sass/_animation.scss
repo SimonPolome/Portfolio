@@ -23,3 +23,18 @@
     transform-origin: bottom;
   }
 }
+
+
+.disk{
+  animation: disk 4s infinite linear;
+}
+
+@keyframes disk {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform:rotate(359deg);
+  }
+}

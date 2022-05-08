@@ -1,5 +1,7 @@
 "use strict";
 
+// Le slider //
+
 const btnPrev = document.querySelector(".icon--prev");
 const btnNext = document.querySelector(".icon--next");
 
@@ -29,6 +31,7 @@ function prev(){
     }    
 };
 
+// La navigation entre les pages //
 
 const circleav = document.querySelector(".circle--avant");
 const circlear = document.querySelector(".circle--arriere");
@@ -53,9 +56,10 @@ const continuer = document.querySelector(".btn--continuer");
 const pageequipe = document.querySelector(".page--equipechap");
 const pagemort = document.querySelector(".page--mort");
 
+
 commencer.addEventListener("click", () => {
     pageintro.classList.remove('page--show');
-    pageequipe.classList.add('page--show');     
+    pageequipe.classList.add('page--show'); 
 });
 
 continuer.addEventListener("click", () => {
@@ -63,20 +67,30 @@ continuer.addEventListener("click", () => {
     pagechoix.classList.add('page--show');    
 });
 
+// Les musiques //
 
+var sfx = {
+    push: new Howl({
+       src: [
+          'https://assets.codepen.io/21542/howler-demo-bg-music.mp3',
+       ],
+       autoplay: true,
+       loop: true,
+       volume: 0.2,
+    })
+}
 
-var soundBtn = document.querySelector(".icon--sound");
-var audio = document.querySelector(".audio");
+const soundBtn = document.querySelector(".icon--sound");
+const audio = document.querySelector(".audio");
 var count = 0;
 
 soundBtn.addEventListener("click", playPause)
-
 function playPause(){
     if(count == 0){
         count = 1;
-        console.log("salut");
+        sfx.push.pause();       
     }else{
-        count = 0;
-        console.log("yo");
+        count = 0;        
+        sfx.push.play();     
     }
 }
