@@ -70,17 +70,28 @@ continuer.addEventListener("click", () => {
 // Les musiques //
 
 var sfx = {
-    push: new Howl({
+    bgsound: new Howl({
        src: [
-          'https://assets.codepen.io/21542/howler-demo-bg-music.mp3',
+          'http://simon-polome.ovh/projets/musiques/audio.mp3',
        ],
-       autoplay: true,
        loop: true,
-       volume: 0.2,
-    })
+       volume: 0.1,
+    }),
+    people: new Howl({
+        src: [
+           'http://simon-polome.ovh/projets/musiques/david.mp3'
+        ]
+     }),
+     flight: new Howl({
+        src: [
+           'https://assets.codepen.io/21542/howler-demo-bg-music.mp3'
+        ]
+     })
 }
 
 const soundBtn = document.querySelector(".icon--sound");
+const sound = document.querySelector(".sound");
+const soundoff = document.querySelector(".sound--off");
 const audio = document.querySelector(".audio");
 var count = 0;
 
@@ -88,9 +99,48 @@ soundBtn.addEventListener("click", playPause)
 function playPause(){
     if(count == 0){
         count = 1;
-        sfx.push.pause();       
+        sfx.bgsound.pause(); 
+        sound.classList.add('sound--none');
+        soundoff.classList.remove('sound--none');
+                 
     }else{
         count = 0;        
-        sfx.push.play();     
+        sfx.bgsound.play();  
+        soundoff.classList.add('sound--none');
+        sound.classList.remove('sound--none');   
     }
 }
+
+commencer.addEventListener("click", () => {
+    sfx.bgsound.play();
+});
+
+const disk1 = document.querySelector(".icon--disk1");
+const disk2 = document.querySelector(".icon--disk2");
+
+disk1.addEventListener("click", () => {
+    if (!sfx.people.playing()) {
+        sfx.people.play();
+    }    
+});
+
+disk2.addEventListener("click", () => {
+    if (!sfx.flight.playing()) {
+        sfx.flight.play();
+    }    
+});
+
+
+// Les modals //
+
+var modalBtn = document.querySelector(".icon--photo");
+var modalBg = document.querySelector(".modal-bg");
+var modalClose = document.querySelector(".icon--close");
+
+modalBtn.addEventListener("click", () => {
+    modalBg.classList.add('bg-active')
+});
+
+modalClose.addEventListener("click", () => {
+    modalBg.classList.remove('bg-active')
+});
