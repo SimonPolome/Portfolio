@@ -5,8 +5,8 @@
 const btnPrev = document.querySelector(".icon--prev");
 const btnNext = document.querySelector(".icon--next");
 
-btnNext.addEventListener("click", next)
-btnPrev.addEventListener("click", prev)
+btnNext.addEventListener("click", next);
+btnPrev.addEventListener("click", prev);
 
 function next(){
     let elShow = document.querySelector(".page--show");
@@ -31,82 +31,95 @@ function prev(){
     }    
 };
 
+
+
 // La navigation entre les pages //
 
-const circleav = document.querySelector(".circle--avant");
-const circlear = document.querySelector(".circle--arriere");
-const pagechoix = document.querySelector(".page--choix");
-const pageavionvie = document.querySelector(".page--avionvie");
-const pageavionmort = document.querySelector(".page--avionmort");
+const circleAv = document.querySelector(".circle--avant");
+const circleAr = document.querySelector(".circle--arriere");
+const pageChoix = document.querySelector(".page--choix");
+const pageAvionvie = document.querySelector(".page--avionvie");
+const pageAvionmort = document.querySelector(".page--avionmort");
 
 
-circleav.addEventListener("click", () => {
-    pagechoix.classList.remove('page--show');
-    pageavionvie.classList.add('page--show');    
+circleAv.addEventListener("click", () => {
+    pageChoix.classList.remove('page--show');
+    pageAvionvie.classList.add('page--show');    
 });
 
-circlear.addEventListener("click", () => {
-    pagechoix.classList.remove('page--show');
-    pageavionmort.classList.add('page--show');    
+circleAr.addEventListener("click", () => {
+    pageChoix.classList.remove('page--show');
+    pageAvionmort.classList.add('page--show');    
 });
 
 const commencer = document.querySelector(".btn--commencer");
-const pageintro = document.querySelector(".page--intro");
+const pageIntro = document.querySelector(".page--intro");
 const continuer = document.querySelector(".btn--continuer");
-const pageequipe = document.querySelector(".page--equipechap");
-const pagemort = document.querySelector(".page--mort");
+const pageEquipe = document.querySelector(".page--equipechap");
+const pageMort = document.querySelector(".page--mort");
 
 
 commencer.addEventListener("click", () => {
-    pageintro.classList.remove('page--show');
-    pageequipe.classList.add('page--show'); 
+    pageIntro.classList.remove('page--show');
+    pageEquipe.classList.add('page--show'); 
 });
 
 continuer.addEventListener("click", () => {
-    pagemort.classList.remove('page--show');
-    pagechoix.classList.add('page--show');    
+    pageMort.classList.remove('page--show');
+    pageChoix.classList.add('page--show');    
 });
+
+
 
 // Les musiques //
 
-var sfx = {
+let sfx = {
     bgsound: new Howl({
        src: [
-          'http://simon-polome.ovh/projets/musiques/audio.mp3',
+          'http://simon-polome.ovh/projets/musiques/soundBg.mp3',
        ],
        loop: true,
        volume: 0.1,
     }),
-    people: new Howl({
+    soundAeroport: new Howl({
         src: [
-           'http://simon-polome.ovh/projets/musiques/david.mp3'
+           'http://simon-polome.ovh/projets/musiques/soundAeroport.mp3'
         ]
      }),
-     flight: new Howl({
+     soundAvion: new Howl({
         src: [
-           'https://assets.codepen.io/21542/howler-demo-bg-music.mp3'
+           'http://simon-polome.ovh/projets/musiques/soundAvion.mp3'
         ]
-     })
+     }),
+     soundCrash: new Howl({
+        src: [
+           'http://simon-polome.ovh/projets/musiques/soundCrash.mp3'
+        ]
+     }),
+     soundReveil: new Howl({
+        src: [
+           'http://simon-polome.ovh/projets/musiques/soundReveil.mp3'
+        ]
+     }),
 }
 
 const soundBtn = document.querySelector(".icon--sound");
 const sound = document.querySelector(".sound");
-const soundoff = document.querySelector(".sound--off");
-const audio = document.querySelector(".audio");
-var count = 0;
+const soundOff = document.querySelector(".sound--off");
+let count = 0;
 
-soundBtn.addEventListener("click", playPause)
+soundBtn.addEventListener("click", playPause);
 function playPause(){
     if(count == 0){
         count = 1;
         sfx.bgsound.pause(); 
         sound.classList.add('sound--none');
-        soundoff.classList.remove('sound--none');
+        soundOff.classList.remove('sound--none');
                  
     }else{
         count = 0;        
         sfx.bgsound.play();  
-        soundoff.classList.add('sound--none');
+        soundOff.classList.add('sound--none');
         sound.classList.remove('sound--none');   
     }
 }
@@ -115,27 +128,36 @@ commencer.addEventListener("click", () => {
     sfx.bgsound.play();
 });
 
-const disk1 = document.querySelector(".icon--disk1");
-const disk2 = document.querySelector(".icon--disk2");
-
-disk1.addEventListener("click", () => {
-    if (!sfx.people.playing()) {
-        sfx.people.play();
+document.querySelector(".icon--disk1").addEventListener("click", () => {
+    if (!sfx.soundAeroport.playing()) {
+        sfx.soundAeroport.play();
     }    
 });
-
-disk2.addEventListener("click", () => {
-    if (!sfx.flight.playing()) {
-        sfx.flight.play();
+document.querySelectorAll('.icon--disk2').forEach(item => {
+    item.addEventListener('click', event => {
+        if (!sfx.soundAvion.playing()) {
+            sfx.soundAvion.play();
+        }    
+    })
+});
+document.querySelectorAll('.icon--disk3').forEach(item => {
+    item.addEventListener('click', event => {
+        if (!sfx.soundCrash.playing()) {
+            sfx.soundCrash.play();
+        }    
+    })
+});
+document.querySelector(".icon--disk4").addEventListener("click", () => {
+    if (!sfx.soundReveil.playing()) {
+        sfx.soundReveil.play();
     }    
 });
-
 
 // Les modals //
 
-var modalBtn = document.querySelector(".icon--photo");
-var modalBg = document.querySelector(".modal-bg");
-var modalClose = document.querySelector(".icon--close");
+const modalBtn = document.querySelector(".icon--photo");
+const modalBg = document.querySelector(".modal-bg");
+const modalClose = document.querySelector(".icon--close");
 
 modalBtn.addEventListener("click", () => {
     modalBg.classList.add('bg-active')
@@ -144,3 +166,5 @@ modalBtn.addEventListener("click", () => {
 modalClose.addEventListener("click", () => {
     modalBg.classList.remove('bg-active')
 });
+
+
