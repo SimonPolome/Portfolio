@@ -35,38 +35,34 @@ function prev(){
 
 // La navigation entre les pages //
 
-const circleAv = document.querySelector(".circle--avant");
-const circleAr = document.querySelector(".circle--arriere");
+const commencer = document.querySelector(".btn--commencer");
+const recommcencer = document.querySelector(".btn--recommcencer");
+const circleAv1 = document.querySelector(".circle--avant1");
+const circleAr1 = document.querySelector(".circle--arriere1");
+const pageIntro = document.querySelector(".page--intro");
+const pageEquipe = document.querySelector(".page--equipechap");
 const pageChoix1 = document.querySelector(".page--choix1");
 const pageAvionvie = document.querySelector(".page--avionvie");
 const pageAvionmort = document.querySelector(".page--avionmort");
-
-
-circleAv.addEventListener("click", () => {
-    pageChoix1.classList.remove('page--show');
-    pageAvionvie.classList.add('page--show');    
-});
-
-circleAr.addEventListener("click", () => {
-    pageChoix1.classList.remove('page--show');
-    pageAvionmort.classList.add('page--show');    
-});
-
-const commencer = document.querySelector(".btn--commencer");
-const pageIntro = document.querySelector(".page--intro");
-const continuer = document.querySelector(".btn--continuer");
-const pageEquipe = document.querySelector(".page--equipechap");
 const pageMort = document.querySelector(".page--mort");
-
 
 commencer.addEventListener("click", () => {
     pageIntro.classList.remove('page--show');
     pageEquipe.classList.add('page--show'); 
 });
-
-continuer.addEventListener("click", () => {
+recommcencer.addEventListener("click", () => {
     pageMort.classList.remove('page--show');
     pageChoix1.classList.add('page--show');    
+});
+
+
+circleAv1.addEventListener("click", () => {
+    pageChoix1.classList.remove('page--show');
+    pageAvionvie.classList.add('page--show');    
+});
+circleAr1.addEventListener("click", () => {
+    pageChoix1.classList.remove('page--show');
+    pageAvionmort.classList.add('page--show');    
 });
 
 
@@ -76,29 +72,29 @@ continuer.addEventListener("click", () => {
 let sfx = {
     bgsound: new Howl({
        src: [
-          '../assets/audios/soundBg.mp3',
+          'assets/audios/soundBg.mp3',
        ],
        loop: true,
        volume: 0.1,
     }),
     soundAeroport: new Howl({
         src: [
-           '../assets/audios/soundAeroport.mp3'
+           'assets/audios/soundAeroport.mp3'
         ]
      }),
      soundAvion: new Howl({
         src: [
-           '../assets/audios/soundAvion.mp3'
+           'assets/audios/soundAvion.mp3'
         ]
      }),
      soundCrash: new Howl({
         src: [
-           '../assets/audios/soundCrash.mp3'
+           'assets/audios/soundCrash.mp3'
         ]
      }),
      soundReveil: new Howl({
         src: [
-           '../assets/audios/soundReveil.mp3'
+           'assets/audios/soundReveil.mp3'
         ]
      }),
 }
@@ -113,9 +109,12 @@ function playPause(){
     if(count == 0){
         count = 1;
         sfx.bgsound.pause(); 
+        sfx.soundAeroport.stop(); 
+        sfx.soundAvion.stop();
+        sfx.soundCrash.stop();
+        sfx.soundReveil.stop();
         sound.classList.add('sound--none');
-        soundOff.classList.remove('sound--none');
-                 
+        soundOff.classList.remove('sound--none');                 
     }else{
         count = 0;        
         sfx.bgsound.play();  
@@ -127,7 +126,6 @@ function playPause(){
 commencer.addEventListener("click", () => {
     sfx.bgsound.play();
 });
-
 document.querySelector(".icon--disk1").addEventListener("click", () => {
     if (!sfx.soundAeroport.playing()) {
         sfx.soundAeroport.play();
@@ -174,16 +172,39 @@ modalClose.addEventListener("click", () => {
 const video2 = document.querySelector(".video--2");
 const video3 = document.querySelector(".video--3");
 const video4 = document.querySelector(".video--4");
+const video5 = document.querySelector(".video--5");
+const video6 = document.querySelector(".video--6");
+const video7 = document.querySelector(".video--7");
+const video8 = document.querySelector(".video--8");
+const video9 = document.querySelector(".video--9");
 
 
+const circleAv = document.querySelector(".circle--avant");
+const circleAr = document.querySelector(".circle--arriere");
 
 btnNext.addEventListener("click", startVideo);
 circleAv.addEventListener("click", startVideo);
+circleAr.addEventListener("click", startVideo);
+
 
 function startVideo() {
     if(document.querySelector(".page--video2").classList.contains('page--show')){
         video2.play();
     }else if(document.querySelector(".page--video3").classList.contains('page--show')){
         video3.play();
+    }else if(document.querySelector(".page--video4").classList.contains('page--show')){
+        video4.play();
+    }else if(document.querySelector(".page--video5").classList.contains('page--show')){
+        video5.play();
+    }else if(document.querySelector(".page--video6").classList.contains('page--show')){
+        video6.play();
+    }else if(document.querySelector(".page--video7").classList.contains('page--show')){
+        video7.play();
+    }else if(document.querySelector(".page--video8").classList.contains('page--show')){
+        video8.play();
+    }else if(document.querySelector(".page--video9").classList.contains('page--show')){
+        video9.play();
+    }else if(document.querySelector(".page--video10").classList.contains('page--show')){
+        video4.play();
     }
 }
