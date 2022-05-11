@@ -35,18 +35,6 @@ main {
     visibility: visible;
     pointer-events: all;
   }
-
-  &--intro {
-    background: linear-gradient(
-      0deg,
-      rgba(26, 26, 26, 0.9),
-      rgba(26, 26, 26, 0.9)
-    ),
-    url(../images/montagnes.png);
-  background-size: cover;
-  background-position: center;
-  }
-
   &__container {
     height: 100%;    
     box-sizing: border-box;
@@ -69,16 +57,11 @@ main {
   }
 
   &--equipe {
-    background-image: url(../images/equipe.png);
+    background-image: url(../images/equipe-blanc.png);
   }
 
   &--equipechap {
-    background: linear-gradient(
-        0deg,
-        rgba(26, 26, 26, 0.9),
-        rgba(26, 26, 26, 0.9)
-      ),
-      url(../images/equipe.png);
+    background: url(../images/equipe-noir.png);
     background-size: cover;
     background-position: center;
     z-index: 20;
@@ -94,17 +77,6 @@ main {
   &--avionvie,
   &--avionmort {
     z-index: 20;
-  }
-
-  &--choix1 {
-    background: linear-gradient(
-      0deg,
-      rgba(26, 26, 26, 0.9),
-      rgba(26, 26, 26, 0.9)
-    ),
-    url(../images/choix-avion.png);
-  background-size: cover;
-  background-position: center;
   }
 
   &--avion {
@@ -200,6 +172,18 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 @media (min-width: 768px){

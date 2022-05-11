@@ -37,18 +37,18 @@ function prev(){
 
 const circleAv = document.querySelector(".circle--avant");
 const circleAr = document.querySelector(".circle--arriere");
-const pageChoix = document.querySelector(".page--choix");
+const pageChoix1 = document.querySelector(".page--choix1");
 const pageAvionvie = document.querySelector(".page--avionvie");
 const pageAvionmort = document.querySelector(".page--avionmort");
 
 
 circleAv.addEventListener("click", () => {
-    pageChoix.classList.remove('page--show');
+    pageChoix1.classList.remove('page--show');
     pageAvionvie.classList.add('page--show');    
 });
 
 circleAr.addEventListener("click", () => {
-    pageChoix.classList.remove('page--show');
+    pageChoix1.classList.remove('page--show');
     pageAvionmort.classList.add('page--show');    
 });
 
@@ -66,7 +66,7 @@ commencer.addEventListener("click", () => {
 
 continuer.addEventListener("click", () => {
     pageMort.classList.remove('page--show');
-    pageChoix.classList.add('page--show');    
+    pageChoix1.classList.add('page--show');    
 });
 
 
@@ -168,3 +168,18 @@ modalClose.addEventListener("click", () => {
 });
 
 
+// Les videos //
+
+
+const video1 = document.querySelector(".video--1");
+const video2 = document.querySelector(".video--2");
+btnNext.addEventListener("click", startVideo);
+circleAv.addEventListener("click", startVideo);
+
+function startVideo() {
+    if(pageChoix1.classList.contains('page--show')){
+        video1.play();
+    }else if(pageAvionvie.classList.contains('page--show')){
+        video2.play();
+    }
+}
