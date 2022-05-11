@@ -56,15 +56,13 @@ main {
     }
   }
 
-  &--equipe {
-    background-image: url(../images/equipe-blanc.png);
+  &--equipechap {
+    background-image: url(../images/image1.png);
+    z-index: 20;
   }
 
-  &--equipechap {
-    background: url(../images/equipe-noir.png);
-    background-size: cover;
-    background-position: center;
-    z-index: 20;
+  &--equipe {
+    background-image: url(../images/image2.png);
   }
 
   &--choix,
@@ -80,15 +78,15 @@ main {
   }
 
   &--avion {
-    background-image: url(../images/avion.png);
+    background-image: url(../images/image3.png);
   }
 
   &--nuages {
-    background-image: url(../images/nuages.png);
+    background-image: url(../images/image4.png);
   }
 
   &--montagnes {
-    background-image: url(../images/montagnes.png);
+    background-image: url(../images/image5.png);
   }
 
   &--montagnesmort {
@@ -96,30 +94,19 @@ main {
   }
 
   &--reveil {
-    background-image: url(../images/reveil.png);
-  }
-
-  &--reveilchap {
-    background: linear-gradient(
-        0deg,
-        rgba(26, 26, 26, 0.9),
-        rgba(26, 26, 26, 0.9)
-      ),
-      url(../images/reveil.png);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/image6.png);
   }
 
   &--survie {
-    background-image: url(../images/survie.png);
+    background-image: url(../images/image7.png);
   }
 
   &--groupe {
-    background-image: url(../images/groupe.png);
+    background-image: url(../images/image8.png);
   }
 
   &--astuces {
-    background-image: url(../images/astuces.png);
+    background-image: url(../images/image9.png);
   }
 }
 .flex--column {

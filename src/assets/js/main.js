@@ -171,15 +171,18 @@ modalClose.addEventListener("click", () => {
 // Les videos //
 
 
-const video1 = document.querySelector(".video--1");
 const video2 = document.querySelector(".video--2");
+const video3 = document.querySelector(".video--3");
+
+
+
 btnNext.addEventListener("click", startVideo);
 circleAv.addEventListener("click", startVideo);
 
 function startVideo() {
     if(pageChoix1.classList.contains('page--show')){
-        video1.play();
-    }else if(pageAvionvie.classList.contains('page--show')){
         video2.play();
+    }else if(pageAvionvie.classList.contains('page--show')){
+        video3.play();
     }
 }
