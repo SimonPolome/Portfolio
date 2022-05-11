@@ -76,29 +76,29 @@ continuer.addEventListener("click", () => {
 let sfx = {
     bgsound: new Howl({
        src: [
-          'http://simon-polome.ovh/projets/musiques/soundBg.mp3',
+          '../assets/audios/soundBg.mp3',
        ],
        loop: true,
        volume: 0.1,
     }),
     soundAeroport: new Howl({
         src: [
-           'http://simon-polome.ovh/projets/musiques/soundAeroport.mp3'
+           '../assets/audios/soundAeroport.mp3'
         ]
      }),
      soundAvion: new Howl({
         src: [
-           'http://simon-polome.ovh/projets/musiques/soundAvion.mp3'
+           '../assets/audios/soundAvion.mp3'
         ]
      }),
      soundCrash: new Howl({
         src: [
-           'http://simon-polome.ovh/projets/musiques/soundCrash.mp3'
+           '../assets/audios/soundCrash.mp3'
         ]
      }),
      soundReveil: new Howl({
         src: [
-           'http://simon-polome.ovh/projets/musiques/soundReveil.mp3'
+           '../assets/audios/soundReveil.mp3'
         ]
      }),
 }
@@ -173,6 +173,7 @@ modalClose.addEventListener("click", () => {
 
 const video2 = document.querySelector(".video--2");
 const video3 = document.querySelector(".video--3");
+const video4 = document.querySelector(".video--4");
 
 
 
@@ -180,9 +181,9 @@ btnNext.addEventListener("click", startVideo);
 circleAv.addEventListener("click", startVideo);
 
 function startVideo() {
-    if(pageChoix1.classList.contains('page--show')){
+    if(document.querySelector(".page--video2").classList.contains('page--show')){
         video2.play();
-    }else if(pageAvionvie.classList.contains('page--show')){
+    }else if(document.querySelector(".page--video3").classList.contains('page--show')){
         video3.play();
     }
 }
