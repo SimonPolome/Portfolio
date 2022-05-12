@@ -36,35 +36,57 @@ function prev(){
 // La navigation entre les pages //
 
 const commencer = document.querySelector(".btn--commencer");
-const recommcencer = document.querySelector(".btn--recommcencer");
-const circleAv1 = document.querySelector(".circle--avant1");
-const circleAr1 = document.querySelector(".circle--arriere1");
-const pageIntro = document.querySelector(".page--intro");
-const pageEquipe = document.querySelector(".page--equipechap");
 const pageChoix1 = document.querySelector(".page--choix1");
-const pageAvionvie = document.querySelector(".page--avionvie");
-const pageAvionmort = document.querySelector(".page--avionmort");
-const pageMort = document.querySelector(".page--mort");
+const pageChoix2 = document.querySelector(".page--choix2");
+const pageChoix3 = document.querySelector(".page--choix3");
+
 
 commencer.addEventListener("click", () => {
-    pageIntro.classList.remove('page--show');
-    pageEquipe.classList.add('page--show'); 
+    document.querySelector(".page--intro").classList.remove('page--show');
+    document.querySelector(".page--image1").classList.add('page--show'); 
 });
-recommcencer.addEventListener("click", () => {
-    pageMort.classList.remove('page--show');
+
+
+document.querySelector(".circle--avant").addEventListener("click", () => {
+    pageChoix1.classList.remove('page--show');
+    document.querySelector(".page--avionvie").classList.add('page--show');    
+});
+document.querySelector(".circle--arriere").addEventListener("click", () => {
+    pageChoix1.classList.remove('page--show');
+    document.querySelector(".page--avionmort").classList.add('page--show');    
+});
+document.querySelector(".btn--recommcencer1").addEventListener("click", () => {
+    document.querySelector(".page--mort1").classList.remove('page--show');
     pageChoix1.classList.add('page--show');    
 });
 
 
-circleAv1.addEventListener("click", () => {
-    pageChoix1.classList.remove('page--show');
-    pageAvionvie.classList.add('page--show');    
+document.querySelector(".circle--oui").addEventListener("click", () => {
+    pageChoix2.classList.remove('page--show');
+    document.querySelector(".page--survievie").classList.add('page--show');    
 });
-circleAr1.addEventListener("click", () => {
-    pageChoix1.classList.remove('page--show');
-    pageAvionmort.classList.add('page--show');    
+document.querySelector(".circle--non").addEventListener("click", () => {
+    pageChoix2.classList.remove('page--show');
+    document.querySelector(".page--surviemort").classList.add('page--show');    
+});
+document.querySelector(".btn--recommcencer2").addEventListener("click", () => {
+    document.querySelector(".page--mort2").classList.remove('page--show');
+    pageChoix2.classList.add('page--show');    
 });
 
+
+document.querySelector(".circle--nord").addEventListener("click", () => {
+    pageChoix3.classList.remove('page--show');
+    document.querySelector(".page--sauvetagevie").classList.add('page--show');    
+});
+document.querySelector(".circle--sud").addEventListener("click", () => {
+    pageChoix3.classList.remove('page--show');
+    document.querySelector(".page--sauvetagemort").classList.add('page--show');    
+});
+document.querySelector(".btn--recommcencer3").addEventListener("click", () => {
+    document.querySelector(".page--mort3").classList.remove('page--show');
+    pageChoix3.classList.add('page--show');    
+});
 
 
 // Les musiques //
@@ -177,14 +199,28 @@ const video6 = document.querySelector(".video--6");
 const video7 = document.querySelector(".video--7");
 const video8 = document.querySelector(".video--8");
 const video9 = document.querySelector(".video--9");
+const video10 = document.querySelector(".video--10");
+const video11 = document.querySelector(".video--11");
+const video12 = document.querySelector(".video--12");
+const video13 = document.querySelector(".video--13");
+const video14 = document.querySelector(".video--14");
+const video15 = document.querySelector(".video--15");
+const video16 = document.querySelector(".video--16");
+const video17 = document.querySelector(".video--17");
+const video18 = document.querySelector(".video--18");
+const video19 = document.querySelector(".video--19");
+const video20 = document.querySelector(".video--20");
+const video21 = document.querySelector(".video--21");
+const video22 = document.querySelector(".video--22");
 
 
-const circleAv = document.querySelector(".circle--avant");
-const circleAr = document.querySelector(".circle--arriere");
+
+const circle1= document.querySelector(".circle--1");
+const circle2 = document.querySelector(".circle--2");
 
 btnNext.addEventListener("click", startVideo);
-circleAv.addEventListener("click", startVideo);
-circleAr.addEventListener("click", startVideo);
+circle1.addEventListener("click", startVideo);
+circle2.addEventListener("click", startVideo);
 
 
 function startVideo() {
@@ -205,6 +241,33 @@ function startVideo() {
     }else if(document.querySelector(".page--video9").classList.contains('page--show')){
         video9.play();
     }else if(document.querySelector(".page--video10").classList.contains('page--show')){
-        video4.play();
+        video10.play();
+    }else if(document.querySelector(".page--video11").classList.contains('page--show')){
+        video11.play();
+    }else if(document.querySelector(".page--video12").classList.contains('page--show')){
+        video12.play();
+    }else if(document.querySelector(".page--video13").classList.contains('page--show')){
+        video13.play();
+    }else if(document.querySelector(".page--video14").classList.contains('page--show')){
+        video14.play();
+    }else if(document.querySelector(".page--video15").classList.contains('page--show')){
+        video15.play();
+    }else if(document.querySelector(".page--video16").classList.contains('page--show')){
+        video16.play();
+    }else if(document.querySelector(".page--video17").classList.contains('page--show')){
+        video17.play();
+    }else if(document.querySelector(".page--video18").classList.contains('page--show')){
+        video18.play();
+    }else if(document.querySelector(".page--video19").classList.contains('page--show')){
+        video19.play();
+    }else if(document.querySelector(".page--video20").classList.contains('page--show')){
+        video20.play();
+    }else if(document.querySelector(".page--video21").classList.contains('page--show')){
+        video21.play();
+    }else if(document.querySelector(".page--video22").classList.contains('page--show')){
+        video22.play();
     }
+    
+    
+    
 }

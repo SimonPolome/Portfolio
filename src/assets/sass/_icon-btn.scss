@@ -136,6 +136,26 @@
       content: "ARRIÈRE";
     }
   }
+  &--oui {
+    &::before{
+      content: "OUI";
+    }
+  }
+  &--non {
+    &::before{
+      content: "NON";
+    }
+  }
+  &--nord {
+    &::before{
+      content: "NORD";
+    }
+  }
+  &--sud {
+    &::before{
+      content: "SUD";
+    }
+  }
 }
 .line{
   border-bottom: 2px dotted var(--color-white);
