@@ -75,11 +75,11 @@ document.querySelector(".btn--recommcencer2").addEventListener("click", () => {
 });
 
 
-document.querySelector(".circle--nord").addEventListener("click", () => {
+document.querySelector(".circle--continuer").addEventListener("click", () => {
     pageChoix3.classList.remove('page--show');
     document.querySelector(".page--sauvetagevie").classList.add('page--show');    
 });
-document.querySelector(".circle--sud").addEventListener("click", () => {
+document.querySelector(".circle--retourner").addEventListener("click", () => {
     pageChoix3.classList.remove('page--show');
     document.querySelector(".page--sauvetagemort").classList.add('page--show');    
 });
@@ -119,6 +119,16 @@ let sfx = {
            'assets/audios/soundReveil.mp3'
         ]
      }),
+     soundAvalanche: new Howl({
+        src: [
+           'assets/audios/soundAvalanche.mp3'
+        ]
+     }),
+     soundRiviere: new Howl({
+        src: [
+           'assets/audios/soundRiviere.mp3'
+        ]
+     })
 }
 
 const soundBtn = document.querySelector(".icon--sound");
@@ -135,6 +145,8 @@ function playPause(){
         sfx.soundAvion.stop();
         sfx.soundCrash.stop();
         sfx.soundReveil.stop();
+        sfx.soundAvalanche.stop();
+        sfx.soundRiviere.stop();
         sound.classList.add('sound--none');
         soundOff.classList.remove('sound--none');                 
     }else{
@@ -172,19 +184,30 @@ document.querySelector(".icon--disk4").addEventListener("click", () => {
         sfx.soundReveil.play();
     }    
 });
+document.querySelector(".icon--disk5").addEventListener("click", () => {
+    if (!sfx.soundAvalanche.playing()) {
+        sfx.soundAvalanche.play();
+    }    
+});
+document.querySelector(".icon--disk6").addEventListener("click", () => {
+    if (!sfx.soundRiviere.playing()) {
+        sfx.soundRiviere.play();
+    }    
+});
 
 // Les modals //
 
-const modalBtn = document.querySelector(".icon--photo");
-const modalBg = document.querySelector(".modal-bg");
-const modalClose = document.querySelector(".icon--close");
-
-modalBtn.addEventListener("click", () => {
-    modalBg.classList.add('bg-active')
+document.querySelectorAll('.icon--photo').forEach(item => {
+    item.addEventListener('click', event => {
+        document.querySelector(".modal-bg1").classList.add('bg-active');
+        document.querySelector(".modal-bg2").classList.add('bg-active');
+    })
 });
-
-modalClose.addEventListener("click", () => {
-    modalBg.classList.remove('bg-active')
+document.querySelectorAll('.icon--close').forEach(item => {
+    item.addEventListener('click', event => {
+        document.querySelector(".modal-bg1").classList.remove('bg-active')
+        document.querySelector(".modal-bg2").classList.remove('bg-active')
+    })
 });
 
 
@@ -212,6 +235,10 @@ const video19 = document.querySelector(".video--19");
 const video20 = document.querySelector(".video--20");
 const video21 = document.querySelector(".video--21");
 const video22 = document.querySelector(".video--22");
+const videoMort1 = document.querySelector(".video--mort1");
+const videoMort2 = document.querySelector(".video--mort2");
+const videoMort3 = document.querySelector(".video--mort3");
+
 
 
 
@@ -266,6 +293,12 @@ function startVideo() {
         video21.play();
     }else if(document.querySelector(".page--video22").classList.contains('page--show')){
         video22.play();
+    }else if(document.querySelector(".page--mort1").classList.contains('page--show')){
+        videoMort1.play();
+    }else if(document.querySelector(".page--mort2").classList.contains('page--show')){
+        videoMort2.play();
+    }else if(document.querySelector(".page--mort3").classList.contains('page--show')){
+        videoMort3.play();
     }
     
     

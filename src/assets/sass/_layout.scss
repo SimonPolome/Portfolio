@@ -9,6 +9,9 @@ body {
   font-family: "Barlow", sans-serif;
   color: var(--color-black);
 }
+.display--none{
+  display: none;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -24,7 +27,7 @@ main {
 .page {
   height: 100%;
   width: 100%;
-  background-image: url(../images/fond.png);
+  background-image: url(../images/fond.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -73,76 +76,147 @@ main {
   }
 
   &--image1 {
-    background-image: url(../images/image1.png);
+    background-image: url(../images/image1.jpg);
     z-index: 20;
   }
   &--image2 {
-    background-image: url(../images/image2.png);
+    background-image: url(../images/image2.jpg);
   }
   &--image3 {
-    background-image: url(../images/image3.png);
+    background-image: url(../images/image3.jpg);
   }
   &--image4 {
-    background-image: url(../images/image4.png);
+    background-image: url(../images/image4.jpg);
   }
   &--image5 {
-    background-image: url(../images/image5.png);
-  }
-  &--mort {
-    background-image: url(../images/montagnes-mort.png);
+    background-image: url(../images/image5.jpg);
   }
   &--image6 {
-    background-image: url(../images/image6.png);
+    background-image: url(../images/image6.jpg);
   }
   &--image7 {
-    background-image: url(../images/image7.png);
+    background-image: url(../images/image7.jpg);
   }
   &--image8 {
-    background-image: url(../images/image8.png);
+    background-image: url(../images/image8.jpg);
   }
   &--image9 {
-    background-image: url(../images/image9.png);
+    background-image: url(../images/image9.jpg);
   }
   &--image10 {
-    background-image: url(../images/image10.png);
+    background-image: url(../images/image10.jpg);
   }
   &--image11 {
-    background-image: url(../images/image11.png);
+    background-image: url(../images/image11.jpg);
   }
   &--image12 {
-    background-image: url(../images/image12.png);
+    background-image: url(../images/image12.jpg);
   }
   &--image13 {
-    background-image: url(../images/image13.png);
+    background-image: url(../images/image13.jpg);
   }
   &--image14 {
-    background-image: url(../images/image14.png);
+    background-image: url(../images/image14.jpg);
   }
   &--image15 {
-    background-image: url(../images/image15.png);
+    background-image: url(../images/image15.jpg);
   }
   &--image16 {
-    background-image: url(../images/image16.png);
+    background-image: url(../images/image16.jpg);
   }
   &--image17 {
-    background-image: url(../images/image17.png);
+    background-image: url(../images/image17.jpg);
   }
   &--image18 {
-    background-image: url(../images/image18.png);
+    background-image: url(../images/image18.jpg);
   }
   &--image19 {
-    background-image: url(../images/image19.png);
+    background-image: url(../images/image19.jpg);
   }
   &--image20 {
-    background-image: url(../images/image20.png);
+    background-image: url(../images/image20.jpg);
   }
   &--image21 {
-    background-image: url(../images/image21.png);
+    background-image: url(../images/image21.jpg);
   }
   &--image22 {
-    background-image: url(../images/image22.png);
+    background-image: url(../images/image22.jpg);
   }
 }
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+         .page{
+          background-image: url(../images/fond@2x.jpg);
+
+          &--image1{
+            background-image: url(../images/image1@2x.jpg);
+          }
+          &--image2 {
+            background-image: url(../images/image2@2x.jpg);
+          }
+          &--image3 {
+            background-image: url(../images/image3@2x.jpg);
+          }
+          &--image4 {
+            background-image: url(../images/image4@2x.jpg);
+          }
+          &--image5 {
+            background-image: url(../images/image5@2x.jpg);
+          }
+          &--image6 {
+            background-image: url(../images/image6@2x.jpg);
+          }
+          &--image7 {
+            background-image: url(../images/image7@2x.jpg);
+          }
+          &--image8 {
+            background-image: url(../images/image8@2x.jpg);
+          }
+          &--image9 {
+            background-image: url(../images/image9@2x.jpg);
+          }
+          &--image10 {
+            background-image: url(../images/image10@2x.jpg);
+          }
+          &--image11 {
+            background-image: url(../images/image11@2x.jpg);
+          }
+          &--image12 {
+            background-image: url(../images/image12@2x.jpg);
+          }
+          &--image13 {
+            background-image: url(../images/image13@2x.jpg);
+          }
+          &--image14 {
+            background-image: url(../images/image14@2x.jpg);
+          }
+          &--image15 {
+            background-image: url(../images/image15@2x.jpg);
+          }
+          &--image16 {
+            background-image: url(../images/image16@2x.jpg);
+          }
+          &--image17 {
+            background-image: url(../images/image17@2x.jpg);
+          }
+          &--image18 {
+            background-image: url(../images/image18@2x.jpg);
+          }
+          &--image19 {
+            background-image: url(../images/image19@2x.jpg);
+          }
+          &--image20 {
+            background-image: url(../images/image20@2x.jpg);
+          }
+          &--image21 {
+            background-image: url(../images/image21@2x.jpg);
+          }
+          &--image22 {
+            background-image: url(../images/image22@2x.jpg);
+          }
+         }
+       }
 
 .flex--column {
   display: flex;
@@ -268,11 +342,8 @@ main {
   .dgrid27{
     grid-column: 2/7;
   }
-  .dgrid28 {
-  grid-column: 2/8;
-  }
-  .dgrid29 {
-    grid-column: 2/9;
+  .dgrid49{
+    grid-column: 4/9;
   }
   .dgrid813 {
     grid-column: 8/13;

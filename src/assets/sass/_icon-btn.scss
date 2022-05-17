@@ -89,6 +89,18 @@
     top: 20%;
     left: 30%;    
   }
+  &--disk5{
+    top: 60%;
+    left: 70%;    
+  }
+  &--disk6{
+    top: 70%;
+    left: 50%;    
+  }
+  &--photo2{
+    top: 60%;
+    left: 20%;
+  }
 }
 .sound--none{
   display: none;
@@ -146,14 +158,14 @@
       content: "NON";
     }
   }
-  &--nord {
+  &--continuer {
     &::before{
-      content: "NORD";
+      content: "CONTINUER";
     }
   }
-  &--sud {
+  &--retourner {
     &::before{
-      content: "SUD";
+      content: "RETOURNER";
     }
   }
 }

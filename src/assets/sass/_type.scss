@@ -79,8 +79,10 @@ p {
   &--small {
     font-weight: 400;
   }
-
   &--big {
+    font-size: 1.25rem;
+  }
+  &--bold {
     font-weight: 700;
   }
 }
@@ -143,11 +145,6 @@ p {
     }
   }
 }
-.text {
-  &--big {
-    font-size: 20px;
-  }
-}
 .btn {
 font-size: 1.25rem;
 letter-spacing: 2px;
@@ -182,9 +179,8 @@ padding: 4px;
   }
 }
 .text {
-  &--small {
-    font-size: 18px;
-  }
+  font-size: 18px;
+
   &--big {
     font-size: 1.5rem;
   }
