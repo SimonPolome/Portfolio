@@ -201,14 +201,19 @@ document.querySelectorAll('.icon--photo').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelector(".modal-bg1").classList.add('bg-active');
         document.querySelector(".modal-bg2").classList.add('bg-active');
+        document.querySelector(".modal-bg3").classList.add('bg-active');
+        document.querySelector(".modal-bg4").classList.add('bg-active');
     })
 });
 document.querySelectorAll('.icon--close').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelector(".modal-bg1").classList.remove('bg-active')
         document.querySelector(".modal-bg2").classList.remove('bg-active')
+        document.querySelector(".modal-bg3").classList.remove('bg-active');
+        document.querySelector(".modal-bg4").classList.remove('bg-active');
     })
 });
+
 
 
 // Les videos //

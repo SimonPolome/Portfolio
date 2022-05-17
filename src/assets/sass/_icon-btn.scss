@@ -65,7 +65,8 @@
     height: 3rem;
 
     img{
-      width: 1.5rem;
+      height: 1.5rem;
+      width: auto;
     }
   }  
 
@@ -100,6 +101,14 @@
   &--photo2{
     top: 60%;
     left: 20%;
+  }
+  &--photo3{
+    top: 50%;
+    left: 30%;
+  }
+  &--photo4{
+    top: 30%;
+    left: 30%;
   }
 }
 .sound--none{

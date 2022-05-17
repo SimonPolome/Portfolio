@@ -85,6 +85,9 @@ p {
   &--bold {
     font-weight: 700;
   }
+  &--padding{
+    padding: 2rem;
+  }
 }
 .typo--mort{
   max-width: 100%;
@@ -183,6 +186,9 @@ padding: 4px;
 
   &--big {
     font-size: 1.5rem;
+  }
+  &--padding{
+    padding: 3rem;
   }
 }
 }
