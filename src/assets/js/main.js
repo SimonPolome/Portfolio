@@ -18,7 +18,7 @@ function next(){
         let elFirst = elShow.parentNode.firstElementChild;
         elFirst.classList.add("page--show");
     }    
-};
+}
 function prev(){
     let elShow = document.querySelector(".page--show");
     let elPrev = elShow.previousElementSibling;
@@ -29,7 +29,7 @@ function prev(){
         let elLast = elShow.parentNode.firstElementChild;
         elLast.classList.add("page--show");
     }    
-};
+}
 
 
 
@@ -129,7 +129,7 @@ let sfx = {
            'assets/audios/soundRiviere.mp3'
         ]
      })
-}
+};
 
 const soundBtn = document.querySelector(".icon--sound");
 const sound = document.querySelector(".sound");
@@ -170,7 +170,7 @@ document.querySelectorAll('.icon--disk2').forEach(item => {
         if (!sfx.soundAvion.playing()) {
             sfx.soundAvion.play();
         }    
-    })
+    });
 });
 document.querySelectorAll('.icon--disk3').forEach(item => {
     item.addEventListener('click', event => {
@@ -203,15 +203,15 @@ document.querySelectorAll('.icon--photo').forEach(item => {
         document.querySelector(".modal-bg2").classList.add('bg-active');
         document.querySelector(".modal-bg3").classList.add('bg-active');
         document.querySelector(".modal-bg4").classList.add('bg-active');
-    })
+    });
 });
 document.querySelectorAll('.icon--close').forEach(item => {
     item.addEventListener('click', event => {
-        document.querySelector(".modal-bg1").classList.remove('bg-active')
-        document.querySelector(".modal-bg2").classList.remove('bg-active')
+        document.querySelector(".modal-bg1").classList.remove('bg-active');
+        document.querySelector(".modal-bg2").classList.remove('bg-active');
         document.querySelector(".modal-bg3").classList.remove('bg-active');
         document.querySelector(".modal-bg4").classList.remove('bg-active');
-    })
+    });
 });
 
 
@@ -221,8 +221,11 @@ document.querySelectorAll('.icon--close').forEach(item => {
 
 const video2 = document.querySelector(".video--2");
 const video3 = document.querySelector(".video--3");
+const video3Mort = document.querySelector(".video--3-mort");
 const video4 = document.querySelector(".video--4");
+const video4Mort = document.querySelector(".video--4-mort");
 const video5 = document.querySelector(".video--5");
+const video5Mort = document.querySelector(".video--5-mort");
 const video6 = document.querySelector(".video--6");
 const video7 = document.querySelector(".video--7");
 const video8 = document.querySelector(".video--8");
@@ -260,10 +263,16 @@ function startVideo() {
         video2.play();
     }else if(document.querySelector(".page--video3").classList.contains('page--show')){
         video3.play();
+    }else if(document.querySelector(".page--video3-mort").classList.contains('page--show')){
+        video3Mort.play();
     }else if(document.querySelector(".page--video4").classList.contains('page--show')){
         video4.play();
+    }else if(document.querySelector(".page--video4-mort").classList.contains('page--show')){
+        video4Mort.play();
     }else if(document.querySelector(".page--video5").classList.contains('page--show')){
         video5.play();
+    }else if(document.querySelector(".page--video5-mort").classList.contains('page--show')){
+        video5Mort.play();
     }else if(document.querySelector(".page--video6").classList.contains('page--show')){
         video6.play();
     }else if(document.querySelector(".page--video7").classList.contains('page--show')){
