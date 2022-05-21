@@ -43,7 +43,7 @@ const pageChoix3 = document.querySelector(".page--choix3");
 
 commencer.addEventListener("click", () => {
     document.querySelector(".page--intro").classList.remove('page--show');
-    document.querySelector(".page--image1").classList.add('page--show'); 
+    document.querySelector(".page--video1").classList.add('page--show'); 
 });
 
 
@@ -218,7 +218,7 @@ document.querySelectorAll('.icon--close').forEach(item => {
 
 // Les videos //
 
-
+const video1 = document.querySelector(".video--1");
 const video2 = document.querySelector(".video--2");
 const video3 = document.querySelector(".video--3");
 const video3Mort = document.querySelector(".video--3-mort");
@@ -253,13 +253,16 @@ const videoMort3 = document.querySelector(".video--mort3");
 const circle1= document.querySelector(".circle--1");
 const circle2 = document.querySelector(".circle--2");
 
+commencer.addEventListener("click", startVideo);
 btnNext.addEventListener("click", startVideo);
 circle1.addEventListener("click", startVideo);
 circle2.addEventListener("click", startVideo);
 
 
 function startVideo() {
-    if(document.querySelector(".page--video2").classList.contains('page--show')){
+    if(document.querySelector(".page--video1").classList.contains('page--show')){
+        video1.play();
+    }else if(document.querySelector(".page--video2").classList.contains('page--show')){
         video2.play();
     }else if(document.querySelector(".page--video3").classList.contains('page--show')){
         video3.play();

@@ -27,7 +27,6 @@ main {
 .page {
   height: 100%;
   width: 100%;
-  background-image: url(../images/fond.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -71,13 +70,13 @@ main {
   &--intro {
     z-index: 30;
   }
-  &--viemort {
+  &--viemort,
+  &--video1 {
     z-index: 20;
   }
 
-  &--image1 {
-    background-image: url(../images/image1.jpg);
-    z-index: 20;
+  &--intro {
+    background-image: url(../images/image1.jpg);    
   }
   &--image2 {
     background-image: url(../images/image2.jpg);
@@ -147,10 +146,9 @@ main {
 @media (-webkit-min-device-pixel-ratio: 2), 
        (min-resolution: 192dpi) {
          .page{
-          background-image: url(../images/fond@2x.jpg);
-
-          &--image1{
-            background-image: url(../images/image1@2x.jpg);
+          
+          &--intro {
+            background-image: url(../images/image1@2x.jpg);    
           }
           &--image2 {
             background-image: url(../images/image2@2x.jpg);
