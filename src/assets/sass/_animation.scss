@@ -24,17 +24,19 @@
   }
 }
 
-
-.disk{
-  animation: disk 4s infinite linear;
+.loader__num {
+  transform: translateY(300px);
+  animation: slideUp 0.5s cubic-bezier(0.5, 1, 0.89, 1) forwards;
 }
-
-@keyframes disk {
+.hidden {
+  height: auto;
+  overflow: hidden;
+}
+@keyframes slideUp {
   0% {
-    transform: rotate(0deg);
+    transform: translateY(300px);
   }
-
   100% {
-    transform:rotate(359deg);
+    transform: translateY(0px);
   }
 }

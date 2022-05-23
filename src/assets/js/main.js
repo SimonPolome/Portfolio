@@ -1,5 +1,6 @@
 "use strict";
 
+
 // Le slider //
 
 const btnPrev = document.querySelector(".icon--prev");
@@ -32,6 +33,36 @@ function prev(){
 }
 
 
+// Le loader //
+/*
+const loader = document.querySelector('.loader');
+const pageIntro = document.querySelector('.page--intro');
+
+function init () {
+    setTimeout(() => {
+        loader.style.opacity = 0;
+        loader.style.display = 'none';
+
+        pageIntro.style.display = 'block';
+        pageIntro.style.opacity = 1;
+    }, 5000);
+
+}
+init();
+*/
+const num = document.querySelector('.loader__num');
+let counter = 0;
+
+setInterval(() => {
+    setTimeout(() => {
+        if(counter==100){
+            clearInterval();
+        }else{
+            counter+=1;
+            num.textContent = counter;
+        }
+    }, 1000);
+}, 50);
 
 // La navigation entre les pages //
 
@@ -89,7 +120,7 @@ document.querySelector(".btn--recommcencer3").addEventListener("click", () => {
 });
 
 
-// Les musiques //
+// Les sons //
 
 let sfx = {
     bgsound: new Howl({
@@ -97,7 +128,7 @@ let sfx = {
           'assets/audios/soundBg.mp3',
        ],
        loop: true,
-       volume: 0.1,
+       volume: 0.2,
     }),
     soundAeroport: new Howl({
         src: [
@@ -131,68 +162,90 @@ let sfx = {
      })
 };
 
-const soundBtn = document.querySelector(".icon--sound");
+
 const sound = document.querySelector(".sound");
 const soundOff = document.querySelector(".sound--off");
 let count = 0;
+let countBg = 0;
 
-soundBtn.addEventListener("click", playPause);
-function playPause(){
-    if(count == 0){
-        count = 1;
-        sfx.bgsound.pause(); 
-        sfx.soundAeroport.stop(); 
-        sfx.soundAvion.stop();
-        sfx.soundCrash.stop();
-        sfx.soundReveil.stop();
-        sfx.soundAvalanche.stop();
-        sfx.soundRiviere.stop();
-        sound.classList.add('sound--none');
-        soundOff.classList.remove('sound--none');                 
-    }else{
-        count = 0;        
-        sfx.bgsound.play();  
-        soundOff.classList.add('sound--none');
-        sound.classList.remove('sound--none');   
-    }
-}
 
 commencer.addEventListener("click", () => {
     sfx.bgsound.play();
 });
+
+document.querySelector(".icon--sound").addEventListener("click", () => {
+    if(countBg == 0){
+        countBg = 1;
+        sfx.bgsound.pause(); 
+        sound.classList.add('sound--none');
+        soundOff.classList.remove('sound--none');            
+    }else{
+        countBg = 0;        
+        sfx.bgsound.play();  
+        soundOff.classList.add('sound--none');
+        sound.classList.remove('sound--none');   
+    } 
+});
+
+
+
 document.querySelector(".icon--disk1").addEventListener("click", () => {
-    if (!sfx.soundAeroport.playing()) {
-        sfx.soundAeroport.play();
-    }    
+    if(count == 0){
+        count = 1;
+        sfx.soundAeroport.play();            
+    }else{
+        count = 0;        
+        sfx.soundAeroport.pause();  
+    } 
 });
 document.querySelectorAll('.icon--disk2').forEach(item => {
     item.addEventListener('click', event => {
-        if (!sfx.soundAvion.playing()) {
-            sfx.soundAvion.play();
-        }    
+        if(count == 0){
+            count = 1;
+            sfx.soundAvion.play();           
+        }else{
+            count = 0;        
+            sfx.soundAvion.pause(); 
+        }   
     });
 });
 document.querySelectorAll('.icon--disk3').forEach(item => {
     item.addEventListener('click', event => {
-        if (!sfx.soundCrash.playing()) {
-            sfx.soundCrash.play();
+        if(count == 0){
+            count = 1;
+            sfx.soundCrash.play();           
+        }else{
+            count = 0;        
+            sfx.soundCrash.pause(); 
         }    
     })
 });
 document.querySelector(".icon--disk4").addEventListener("click", () => {
-    if (!sfx.soundReveil.playing()) {
-        sfx.soundReveil.play();
-    }    
+    if(count == 0){
+        count = 1;
+        sfx.soundReveil.play();           
+    }else{
+        count = 0;        
+        sfx.soundReveil.pause(); 
+    }  
 });
 document.querySelector(".icon--disk5").addEventListener("click", () => {
-    if (!sfx.soundAvalanche.playing()) {
-        sfx.soundAvalanche.play();
+    if(count == 0){
+        count = 1;
+        sfx.soundAvalanche.play();           
+    }else{
+        count = 0;        
+        sfx.soundAvalanche.pause(); 
     }    
 });
 document.querySelector(".icon--disk6").addEventListener("click", () => {
-    if (!sfx.soundRiviere.playing()) {
-        sfx.soundRiviere.play();
-    }    
+    if(count == 0){
+        count = 1;
+        sfx.soundRiviere.play();           
+    }else{
+        count = 0;        
+        sfx.soundRiviere.pause(); 
+    }  
 });
 
 // Les modals //
