@@ -184,7 +184,7 @@ document.querySelector(".icon--disk1").addEventListener("click", () => {
     } 
 });
 document.querySelectorAll('.icon--disk2').forEach(item => {
-    item.addEventListener('click', event => {
+    item.addEventListener('click', () => {
         if(count == 0){
             count = 1;
             sfx.soundAvion.play();           
@@ -195,7 +195,7 @@ document.querySelectorAll('.icon--disk2').forEach(item => {
     });
 });
 document.querySelectorAll('.icon--disk3').forEach(item => {
-    item.addEventListener('click', event => {
+    item.addEventListener('click', () => {
         if(count == 0){
             count = 1;
             sfx.soundCrash.play();           
@@ -203,7 +203,7 @@ document.querySelectorAll('.icon--disk3').forEach(item => {
             count = 0;        
             sfx.soundCrash.pause(); 
         }    
-    })
+    });
 });
 document.querySelector(".icon--disk4").addEventListener("click", () => {
     if(count == 0){
@@ -236,7 +236,7 @@ document.querySelector(".icon--disk6").addEventListener("click", () => {
 // Les modals //
 
 document.querySelectorAll('.icon--photo').forEach(item => {
-    item.addEventListener('click', event => {
+    item.addEventListener('click', () => {
         document.querySelector(".modal-bg1").classList.add('bg-active');
         document.querySelector(".modal-bg2").classList.add('bg-active');
         document.querySelector(".modal-bg3").classList.add('bg-active');
@@ -244,7 +244,7 @@ document.querySelectorAll('.icon--photo').forEach(item => {
     });
 });
 document.querySelectorAll('.icon--close').forEach(item => {
-    item.addEventListener('click', event => {
+    item.addEventListener('click', () => {
         document.querySelector(".modal-bg1").classList.remove('bg-active');
         document.querySelector(".modal-bg2").classList.remove('bg-active');
         document.querySelector(".modal-bg3").classList.remove('bg-active');
@@ -354,10 +354,7 @@ function startVideo() {
         videoMort2.play();
     }else if(document.querySelector(".page--mort3").classList.contains('page--show')){
         videoMort3.play();
-    }
-    
-    
-    
+    }    
 }
 
 

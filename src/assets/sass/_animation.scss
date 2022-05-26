@@ -26,10 +26,10 @@
 
 
 .loader {
-  animation: slideUpLoader 1s cubic-bezier(0.64, 0, 0.78, 0) forwards 7s;  
+  animation: slideUpLoader 1s cubic-bezier(0.64, 0, 0.78, 0) forwards 7.5s;  
 }
 .loader__num {
-  animation: slideUp .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 6.5s;  
+  animation: slideUp .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 7s;  
 }
 .hidden {
   height: auto;
