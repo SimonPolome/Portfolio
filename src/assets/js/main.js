@@ -34,22 +34,7 @@ function prev(){
 
 
 // Le loader //
-/*
-const loader = document.querySelector('.loader');
-const pageIntro = document.querySelector('.page--intro');
 
-function init () {
-    setTimeout(() => {
-        loader.style.opacity = 0;
-        loader.style.display = 'none';
-
-        pageIntro.style.display = 'block';
-        pageIntro.style.opacity = 1;
-    }, 5000);
-
-}
-init();
-*/
 const num = document.querySelector('.loader__num');
 let counter = 0;
 
@@ -61,7 +46,7 @@ setInterval(() => {
             counter+=1;
             num.textContent = counter;
         }
-    }, 1000);
+    }, 500);
 }, 50);
 
 // La navigation entre les pages //
@@ -374,3 +359,5 @@ function startVideo() {
     
     
 }
+
+

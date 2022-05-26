@@ -4,7 +4,7 @@
   #Line_#{$i} {
     animation: sound 1s infinite;
     animation-delay: $i * 0.15s;
-    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    animation-timing-function: linear;
   }
 }
 @keyframes sound {
@@ -24,9 +24,12 @@
   }
 }
 
+
+.loader {
+  animation: slideUpLoader 1s cubic-bezier(0.64, 0, 0.78, 0) forwards 7s;  
+}
 .loader__num {
-  transform: translateY(300px);
-  animation: slideUp 0.5s cubic-bezier(0.5, 1, 0.89, 1) forwards;
+  animation: slideUp .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 6.5s;  
 }
 .hidden {
   height: auto;
@@ -34,9 +37,17 @@
 }
 @keyframes slideUp {
   0% {
-    transform: translateY(300px);
+    transform: translateY(0px);
   }
   100% {
+    transform: translateY(-20vmin);
+  }
+}
+@keyframes slideUpLoader {
+  0% {
     transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100vh);   
   }
 }
