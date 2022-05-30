@@ -49,6 +49,7 @@
 
   &--close{
     background-color: var(--color-black);
+    border: 2px solid var(--color-white);
     top: -1.25rem;
     right: -1.25rem;
 
@@ -58,23 +59,32 @@
     }
   }
 
-  &--disk,
+  &--audio,
   &--photo{
-    border: 2px dashed var(--color-black);
+    border: none;
     width: 3rem;
     height: 3rem;
 
     img{
-      height: 1.5rem;
-      width: auto;
+      width: 1.5rem;
+      position: absolute;
     }
   }  
 
-  &--disk1{
+  &__border{
+    width: 100%;
+    height: 100%;
+    border: 1px dashed var(--color-black);
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &--audio1{
     top: 40%;
     left: 70%;    
   }
-  &--disk2{
+  &--audio2{
     top: 30%;
     left: 20%;    
   }
@@ -82,20 +92,20 @@
     top: 60%;
     left: 20%;
   }
-  &--disk3{
+  &--audio3{
     top: 40%;
     left: 80%;    
   }
-  &--disk4{
+  &--audio4{
     top: 20%;
     left: 30%;    
   }
-  &--disk5{
+  &--audio5{
     top: 60%;
     left: 70%;    
   }
-  &--disk6{
-    top: 70%;
+  &--audio6{
+    top: 40%;
     left: 50%;    
   }
   &--photo2{
@@ -111,6 +121,7 @@
     left: 30%;
   }
 }
+
 .sound--none{
   display: none;
 }
@@ -203,6 +214,15 @@
       top: -1.5rem;
       right: -1.5rem;
     }
+    &--audio,
+    &--photo{
+      width: 3.5rem;
+      height: 3.5rem;
+  
+      img{
+        width: 1.75rem;
+      }
+    }  
   }
   .line{
     width: 16rem;

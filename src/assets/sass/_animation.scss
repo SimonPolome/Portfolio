@@ -1,5 +1,7 @@
 @use "_var.scss";
 
+
+// Sound animation
 @for $i from 1 through 4 {
   #Line_#{$i} {
     animation: sound 1s infinite;
@@ -24,7 +26,7 @@
   }
 }
 
-
+// Loader animation
 .loader {
   animation: slideUpLoader 1s cubic-bezier(0.64, 0, 0.78, 0) forwards 7.5s;  
 }
@@ -49,5 +51,18 @@
   }
   100% {
     transform: translateY(-100vh);   
+  }
+}
+
+// Icon animation
+.icon__border{
+  animation: rotate360 15s linear infinite;
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

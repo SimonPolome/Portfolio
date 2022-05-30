@@ -174,7 +174,7 @@ document.querySelector(".icon--sound").addEventListener("click", () => {
 
 
 
-document.querySelector(".icon--disk1").addEventListener("click", () => {
+document.querySelector(".icon--audio1").addEventListener("click", () => {
     if(count == 0){
         count = 1;
         sfx.soundAeroport.play();            
@@ -183,7 +183,7 @@ document.querySelector(".icon--disk1").addEventListener("click", () => {
         sfx.soundAeroport.pause();  
     } 
 });
-document.querySelectorAll('.icon--disk2').forEach(item => {
+document.querySelectorAll('.icon--audio2').forEach(item => {
     item.addEventListener('click', () => {
         if(count == 0){
             count = 1;
@@ -194,7 +194,7 @@ document.querySelectorAll('.icon--disk2').forEach(item => {
         }   
     });
 });
-document.querySelectorAll('.icon--disk3').forEach(item => {
+document.querySelectorAll('.icon--audio3').forEach(item => {
     item.addEventListener('click', () => {
         if(count == 0){
             count = 1;
@@ -205,7 +205,7 @@ document.querySelectorAll('.icon--disk3').forEach(item => {
         }    
     });
 });
-document.querySelector(".icon--disk4").addEventListener("click", () => {
+document.querySelector(".icon--audio4").addEventListener("click", () => {
     if(count == 0){
         count = 1;
         sfx.soundReveil.play();           
@@ -214,7 +214,7 @@ document.querySelector(".icon--disk4").addEventListener("click", () => {
         sfx.soundReveil.pause(); 
     }  
 });
-document.querySelector(".icon--disk5").addEventListener("click", () => {
+document.querySelector(".icon--audio5").addEventListener("click", () => {
     if(count == 0){
         count = 1;
         sfx.soundAvalanche.play();           
@@ -223,7 +223,7 @@ document.querySelector(".icon--disk5").addEventListener("click", () => {
         sfx.soundAvalanche.pause(); 
     }    
 });
-document.querySelector(".icon--disk6").addEventListener("click", () => {
+document.querySelector(".icon--audio6").addEventListener("click", () => {
     if(count == 0){
         count = 1;
         sfx.soundRiviere.play();           
@@ -251,7 +251,6 @@ document.querySelectorAll('.icon--close').forEach(item => {
         document.querySelector(".modal-bg4").classList.remove('bg-active');
     });
 });
-
 
 
 // Les videos //
@@ -357,4 +356,14 @@ function startVideo() {
     }    
 }
 
+/*
+const video = document.querySelector(".video");
+function playVideo(selectObject) {
+    for (let i = 0; i < 20; i++) {
+      if (selectObject.video[i].selected) {
+        qtéSélectionnée++;
+      }
+    }
+  }
 
+*/
