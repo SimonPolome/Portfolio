@@ -173,7 +173,6 @@ document.querySelector(".icon--sound").addEventListener("click", () => {
 });
 
 
-
 document.querySelector(".icon--audio1").addEventListener("click", () => {
     if(count == 0){
         count = 1;
@@ -295,7 +294,6 @@ btnNext.addEventListener("click", startVideo);
 circle1.addEventListener("click", startVideo);
 circle2.addEventListener("click", startVideo);
 
-
 function startVideo() {
     if(document.querySelector(".page--video1").classList.contains('page--show')){
         video1.play();
@@ -356,14 +354,6 @@ function startVideo() {
     }    
 }
 
-/*
-const video = document.querySelector(".video");
-function playVideo(selectObject) {
-    for (let i = 0; i < 20; i++) {
-      if (selectObject.video[i].selected) {
-        qtéSélectionnée++;
-      }
-    }
-  }
 
-*/
+
+
