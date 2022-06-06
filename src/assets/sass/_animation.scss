@@ -14,12 +14,10 @@
     transform: scaleY(1);
     transform-origin: bottom;
   }
-
   50% {
     transform: scaleY(0.7);
     transform-origin: bottom;
   }
-
   100% {
     transform: scaleY(1);
     transform-origin: bottom;
@@ -28,29 +26,32 @@
 
 // Loader animation
 .loader {
-  animation: slideUpLoader 1s cubic-bezier(0.64, 0, 0.78, 0) forwards 7.5s;  
+  animation: animLoader 1s cubic-bezier(0.83, 0, 0.17, 1) forwards 5s;  
 }
 .loader__num {
-  animation: slideUp .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 7s;  
+  animation: animNum .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 4.3s;  
 }
 .hidden {
   height: auto;
   overflow: hidden;
 }
-@keyframes slideUp {
+
+@keyframes animNum {
   0% {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-20vmin);
+    transform: translateY(-15vmin);
   }
 }
-@keyframes slideUpLoader {
+
+@keyframes animLoader {
   0% {
-    transform: translateY(0px);
+    opacity: 1;
   }
   100% {
-    transform: translateY(-100vh);   
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -64,5 +65,38 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+.modal-bg .bg-active{
+  animation: fade-in 5s cubic-bezier(0.83, 0, 0.17, 1) forwards; 
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }

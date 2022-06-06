@@ -3,6 +3,10 @@
 p {
   margin: 0;
 }
+a{
+  text-decoration: none;
+  color: var(--color-white);
+}
 .title {
   font-family: "Barlow Condensed", sans-serif;
   margin: 0;
@@ -94,32 +98,6 @@ p {
   max-width: 100%;
   margin-bottom: 1rem;
 }
-.btn {
-  text-decoration: none;
-  color: var(--color-white);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-top: 3rem;
-  background-color: var(--color-white);
-  padding: 2px;
-
-  :hover,
-  :focus{
-    border-radius: 0;    
-  }
-  :active {
-    background-color: black;
-  }
-  &__cadre{
-    background-color: var(--color-black);
-    padding: 1rem 2rem;
-    border-radius: 0 0 25px 25px;
-    transition:  0.3s cubic-bezier(0.22, 1, 0.36, 1);;
-  }
-}
-
 @media (min-width: 768px){
 .title {
   &--big {
@@ -149,22 +127,10 @@ p {
     }
   }
 }
-.btn {
-font-size: 1.25rem;
-letter-spacing: 2px;
-padding: 4px;
-
-  &__cadre{
-    padding: 1rem 2rem;
-    border-radius: 0 0 25px 25px;
-  }
-}
 .typo--mort {
   margin-bottom: 2rem;
 }
-
 }
-
 
 @media (min-width: 1440px){
 .title {

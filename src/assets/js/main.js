@@ -44,10 +44,10 @@ setInterval(() => {
             clearInterval();
         }else{
             counter+=1;
-            num.textContent = counter;
+            num.textContent = counter + "%";
         }
-    }, 500);
-}, 50);
+    }, 100);
+}, 25);
 
 // La navigation entre les pages //
 
@@ -113,22 +113,25 @@ let sfx = {
           'assets/audios/soundBg.mp3',
        ],
        loop: true,
-       volume: 0.2,
+       volume: 0.1
     }),
     soundAeroport: new Howl({
         src: [
            'assets/audios/soundAeroport.mp3'
-        ]
+        ],
+        volume: 0.3
      }),
      soundAvion: new Howl({
         src: [
            'assets/audios/soundAvion.mp3'
-        ]
+        ],
+        volume: 0.4
      }),
      soundCrash: new Howl({
         src: [
            'assets/audios/soundCrash.mp3'
-        ]
+        ],
+        volume: 0.8
      }),
      soundReveil: new Howl({
         src: [
@@ -138,12 +141,14 @@ let sfx = {
      soundAvalanche: new Howl({
         src: [
            'assets/audios/soundAvalanche.mp3'
-        ]
+        ],
+        volume: 0.8
      }),
      soundRiviere: new Howl({
         src: [
            'assets/audios/soundRiviere.mp3'
-        ]
+        ],
+        volume: 0.8
      })
 };
 
@@ -234,22 +239,18 @@ document.querySelector(".icon--audio6").addEventListener("click", () => {
 
 // Les modals //
 
+const modalBg = document.querySelectorAll(".modal-bg");
 document.querySelectorAll('.icon--photo').forEach(item => {
     item.addEventListener('click', () => {
-        document.querySelector(".modal-bg1").classList.add('bg-active');
-        document.querySelector(".modal-bg2").classList.add('bg-active');
-        document.querySelector(".modal-bg3").classList.add('bg-active');
-        document.querySelector(".modal-bg4").classList.add('bg-active');
+        modalBg.forEach(element => (element).classList.add('bg-active'));
     });
 });
 document.querySelectorAll('.icon--close').forEach(item => {
     item.addEventListener('click', () => {
-        document.querySelector(".modal-bg1").classList.remove('bg-active');
-        document.querySelector(".modal-bg2").classList.remove('bg-active');
-        document.querySelector(".modal-bg3").classList.remove('bg-active');
-        document.querySelector(".modal-bg4").classList.remove('bg-active');
+        modalBg.forEach(element => (element).classList.remove('bg-active'));
     });
 });
+
 
 
 // Les videos //
@@ -353,6 +354,16 @@ function startVideo() {
         videoMort3.play();
     }    
 }
+
+// Copyright date //
+
+let answerDate = document.querySelector(".Date");
+let today = new Date();
+let annee = today.getFullYear();
+answerDate.innerHTML = annee;
+
+
+
 
 
 

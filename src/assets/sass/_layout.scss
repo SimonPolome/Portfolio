@@ -32,15 +32,12 @@ main {
   height: 100%;
   width: 100%;
   background-color: var(--color-black);
-
-  &__box{
-    position: absolute;
-    bottom: 10vmin;
-    left: 10vmin;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__num{
-    font-size: 15vmin;
+    font-size: 10vh;
     color: var(--color-white);
     font-family: "Barlow Condensed", sans-serif;
   }
@@ -96,72 +93,6 @@ main {
     z-index: 20;
   }
 
-  &--intro {
-    background-image: url(../images/image1.jpg); 
-  }
-  &--image2 {
-    background-image: url(../images/image2.jpg);
-  }
-  &--image3 {
-    background-image: url(../images/image3.jpg);
-  }
-  &--image4 {
-    background-image: url(../images/image4.jpg);
-  }
-  &--image5 {
-    background-image: url(../images/image5.jpg);
-  }
-  &--image6 {
-    background-image: url(../images/image6.jpg);
-  }
-  &--image7 {
-    background-image: url(../images/image7.jpg);
-  }
-  &--image8 {
-    background-image: url(../images/image8.jpg);
-  }
-  &--image9 {
-    background-image: url(../images/image9.jpg);
-  }
-  &--image10 {
-    background-image: url(../images/image10.jpg);
-  }
-  &--image11 {
-    background-image: url(../images/image11.jpg);
-  }
-  &--image12 {
-    background-image: url(../images/image12.jpg);
-  }
-  &--image13 {
-    background-image: url(../images/image13.jpg);
-  }
-  &--image14 {
-    background-image: url(../images/image14.jpg);
-  }
-  &--image15 {
-    background-image: url(../images/image15.jpg);
-  }
-  &--image16 {
-    background-image: url(../images/image16.jpg);
-  }
-  &--image17 {
-    background-image: url(../images/image17.jpg);
-  }
-  &--image18 {
-    background-image: url(../images/image18.jpg);
-  }
-  &--image19 {
-    background-image: url(../images/image19.jpg);
-  }
-  &--image20 {
-    background-image: url(../images/image20.jpg);
-  }
-  &--image21 {
-    background-image: url(../images/image21.jpg);
-  }
-  &--image22 {
-    background-image: url(../images/image22.jpg);
-  }
 }
 
 .flex--column {
@@ -171,22 +102,33 @@ main {
 }
 .bulle {
   background-color: var(--color-white);  
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border-radius: 2px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   padding: 1.5rem;
+
+  &--dark{
+    background-color: var(--color-black);
+  }
+}
+.marginb05{
+  margin-bottom: .5rem;
 }
 .marginb1 {
   margin-bottom: 1rem;
 }
+.marginb2{
+  margin-bottom: 2rem;
+}
 .marginb4 {
   margin-bottom: 4rem;
+}
+.margint5{
+  margin-top: 5rem;
 }
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .modal-bg{
   position: fixed;
   width: 100%;
@@ -215,7 +157,8 @@ main {
   align-items: center;
   flex-direction: column;
 }
-.video {
+.video,
+.fond {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -225,6 +168,15 @@ main {
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80vw;
 }
 
 @media (min-width: 768px){
@@ -261,6 +213,13 @@ main {
   }
   .modal{
     width: 60%;
+  }
+  .list{
+    bottom: 3rem;
+    width: 60vw;
+  }
+  .bulle--dark{
+    padding: 2rem;
   }
 }
 
