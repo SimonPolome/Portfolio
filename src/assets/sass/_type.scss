@@ -35,20 +35,17 @@ a{
   &--numero {
     font-size: 4rem;
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+  }
 
-    &::after {
-      display: block;
-      content: "";
-      width: 6rem;
-      height: 2px;
-      border-radius: 50px;
-      background: var(--color-white);
-      position: absolute;
-      bottom: -1rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  &--underline{
+    content: "";
+    width: 6rem;
+    height: 2px;
+    border-radius: 50px;
+    background: var(--color-white);
+    align-self: center;
+    margin-bottom: 3rem;
   }
 
   &--center {
@@ -113,12 +110,14 @@ a{
 
   &--numero {
     font-size: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 1.5rem;
+  }
 
-    &::after {
-      width: 8rem;
-      height: 3px;
-    }
+  &--underline{
+    content: "";
+    width: 8rem;
+    height: 3px;
+    margin-bottom: 4rem;
   }
 
   &--intro {

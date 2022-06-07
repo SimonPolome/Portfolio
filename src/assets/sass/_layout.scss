@@ -102,7 +102,7 @@ main {
 }
 .bulle {
   background-color: var(--color-white);  
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(26, 26, 26, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   padding: 1.5rem;
 
   &--dark{
@@ -140,12 +140,7 @@ main {
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  opacity: 0;
-  z-index: 30;
-}
-.bg-active{
-  visibility: visible;
-  opacity: 1;
+  opacity: 0;  
 }
 .modal{
   background-color: var(--color-white);
@@ -156,7 +151,20 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transform: scale(.8) translateY(200px);
 }
+.modal-bg.active{
+  visibility: visible;
+  opacity: 1;
+  z-index: 50;  
+  transition: opacity .3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.modal-bg.active .modal{
+  transform: scale(1) translate(0);
+  transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
 .video,
 .fond {
   width: 100vw;

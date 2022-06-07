@@ -242,16 +242,14 @@ document.querySelector(".icon--audio6").addEventListener("click", () => {
 const modalBg = document.querySelectorAll(".modal-bg");
 document.querySelectorAll('.icon--photo').forEach(item => {
     item.addEventListener('click', () => {
-        modalBg.forEach(element => (element).classList.add('bg-active'));
+        modalBg.forEach(element => (element).classList.add('active'));
     });
 });
 document.querySelectorAll('.icon--close').forEach(item => {
     item.addEventListener('click', () => {
-        modalBg.forEach(element => (element).classList.remove('bg-active'));
+        modalBg.forEach(element => (element).classList.remove('active'));
     });
 });
-
-
 
 // Les videos //
 
