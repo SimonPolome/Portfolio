@@ -119,43 +119,60 @@ let sfx = {
         src: [
            'assets/audios/soundAeroport.mp3'
         ],
-        volume: 0.3
+        volume: 0.3,
+        onend: function() {
+            count1 = 0;
+         }
      }),
      soundAvion: new Howl({
         src: [
            'assets/audios/soundAvion.mp3'
         ],
-        volume: 0.4
+        volume: 0.4,
+        onend: function() {
+            count2 = 0;
+         }
      }),
      soundCrash: new Howl({
         src: [
            'assets/audios/soundCrash.mp3'
         ],
-        volume: 0.8
+        volume: 0.6,
+        onend: function() {
+            count3 = 0;
+         }
      }),
      soundReveil: new Howl({
         src: [
            'assets/audios/soundReveil.mp3'
-        ]
+        ],
+        onend: function() {
+            count4 = 0;
+         }
      }),
      soundAvalanche: new Howl({
         src: [
            'assets/audios/soundAvalanche.mp3'
         ],
-        volume: 0.8
+        volume: 0.8,
+        onend: function() {
+            count5 = 0;
+         }
      }),
      soundRiviere: new Howl({
         src: [
            'assets/audios/soundRiviere.mp3'
         ],
-        volume: 0.8
+        volume: 0.8,
+        onend: function() {
+            count6 = 0;
+         }
      })
 };
 
 
 const sound = document.querySelector(".sound");
 const soundOff = document.querySelector(".sound--off");
-let count = 0;
 let countBg = 0;
 
 
@@ -177,62 +194,69 @@ document.querySelector(".icon--sound").addEventListener("click", () => {
     } 
 });
 
+let audio = document.querySelector(".audio");
+let count1 = 0;
 
-document.querySelector(".icon--audio1").addEventListener("click", () => {
-    if(count == 0){
-        count = 1;
-        sfx.soundAeroport.play();            
+document.querySelector(".icon--audio1").addEventListener("click", () => {    
+    if(count1 == 0){
+        count1 = 1;
+        sfx.soundAeroport.play();       
     }else{
-        count = 0;        
-        sfx.soundAeroport.pause();  
+        count1 = 0;        
+        sfx.soundAeroport.pause(); 
     } 
 });
+let count2 = 0;
 document.querySelectorAll('.icon--audio2').forEach(item => {
     item.addEventListener('click', () => {
-        if(count == 0){
-            count = 1;
+        if(count2 == 0){
+            count2 = 1;
             sfx.soundAvion.play();           
         }else{
-            count = 0;        
+            count2 = 0;        
             sfx.soundAvion.pause(); 
         }   
     });
 });
+let count3 = 0;
 document.querySelectorAll('.icon--audio3').forEach(item => {
-    item.addEventListener('click', () => {
-        if(count == 0){
-            count = 1;
+    item.addEventListener('click', () => {        
+        if(count3 == 0){
+            count3 = 1;
             sfx.soundCrash.play();           
         }else{
-            count = 0;        
+            count3 = 0;        
             sfx.soundCrash.pause(); 
         }    
     });
 });
-document.querySelector(".icon--audio4").addEventListener("click", () => {
-    if(count == 0){
-        count = 1;
+let count4 = 0;
+document.querySelector(".icon--audio4").addEventListener("click", () => {    
+    if(count4 == 0){
+        count4 = 1;
         sfx.soundReveil.play();           
     }else{
-        count = 0;        
+        count4 = 0;        
         sfx.soundReveil.pause(); 
     }  
 });
-document.querySelector(".icon--audio5").addEventListener("click", () => {
-    if(count == 0){
-        count = 1;
+let count5 = 0;
+document.querySelector(".icon--audio5").addEventListener("click", () => {    
+    if(count5 == 0){
+        count5 = 1;
         sfx.soundAvalanche.play();           
     }else{
-        count = 0;        
+        count5 = 0;        
         sfx.soundAvalanche.pause(); 
     }    
 });
-document.querySelector(".icon--audio6").addEventListener("click", () => {
-    if(count == 0){
-        count = 1;
+let count6 = 0;
+document.querySelector(".icon--audio6").addEventListener("click", () => {    
+    if(count6 == 0){
+        count6 = 1;
         sfx.soundRiviere.play();           
     }else{
-        count = 0;        
+        count6 = 0;        
         sfx.soundRiviere.pause(); 
     }  
 });

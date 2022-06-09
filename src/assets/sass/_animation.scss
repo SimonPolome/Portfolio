@@ -73,14 +73,14 @@
 .page--show .text--animation{
   transform: translateY(200px);
   opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s,
-  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s;
+  animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .page--show .title--animation{
   transform: translateY(200px);
   opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s,
-  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s;
+  animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s,
+  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s;
 }
 @keyframes slideUp {
   0% {
@@ -102,13 +102,12 @@
 .page--show .line{
   transform-origin: center;
   transform: scaleX(0); 
-  animation: scaleUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .8s;
+  animation: scaleUpX 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s;
 }
 .page--show .circle{
-  opacity: 0;
-  animation: opacityUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards 1.2s;
+  animation: opacityUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .8s;
 }
-@keyframes scaleUp {
+@keyframes scaleUpX {
   0% {
     transform: scaleX(0);
   }
@@ -121,7 +120,7 @@
 .page--show .title--underline{
   transform-origin: center;
   transform: scaleX(0); 
-  animation: scaleUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s;
+  animation: scaleUpX 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s;
 }
 
 @keyframes slideDown {
@@ -135,6 +134,8 @@
 .page--show .text--animationdown{
   transform: translateY(-200px);
   opacity: 0;
-  animation: slideDown 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .8s, 
-  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .8s;
+  animation: slideDown 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s, 
+  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s;
 }
+
+
