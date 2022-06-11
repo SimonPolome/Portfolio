@@ -25,14 +25,14 @@
 
 // Loader animation
 .loader {
-  animation: animLoader 1s cubic-bezier(0.83, 0, 0.17, 1) forwards 5s;  
+  animation: animLoader 1s cubic-bezier(0.83, 0, 0.17, 1) forwards 4.5s;  
 }
 .loader__num {
-  animation: animNum .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 4.3s;  
+  animation: animNum .5s cubic-bezier(0.64, 0, 0.78, 0) forwards 4s;  
 }
 .hidden {
   height: auto;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 @keyframes animNum {
@@ -66,7 +66,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 // Page animation
 
@@ -117,6 +116,13 @@
   }
 }
 
+.page--show .btn--recommcencer{
+  transform: scaleX(0); 
+  animation: scaleUpX 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .8s,
+  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .8s;
+}
+
+
 .page--show .title--underline{
   transform-origin: center;
   transform: scaleX(0); 
@@ -138,4 +144,39 @@
   opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .5s;
 }
 
+// Audio icon animation
+@keyframes opacityDown2 {
+  0% {    
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {    
+    opacity: 0;
+  }
+}
+@keyframes opacityDown3 {
+  0% {    
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {    
+    opacity: 0;
+  }
+}
+.icon__animation .Vector_2{
+  animation: opacityDown2 1s linear infinite;
+}
+.icon__animation .Vector_3{
+  animation: opacityDown3 1s linear infinite;
+}
 
+
+.page--show .icon--audio,
+.page--show .icon--photo{
+  animation: scaleUpX 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .1s,
+  opacityUp .5s cubic-bezier(0.22, 1, 0.36, 1) forwards .1s;
+}

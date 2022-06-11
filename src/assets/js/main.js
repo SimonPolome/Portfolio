@@ -32,7 +32,6 @@ function prev(){
     }    
 }
 
-
 // Le loader //
 
 const num = document.querySelector('.loader__num');
@@ -46,8 +45,8 @@ setInterval(() => {
             counter+=1;
             num.textContent = counter + "%";
         }
-    }, 100);
-}, 25);
+    }, 500);
+}, 15);
 
 // La navigation entre les pages //
 
@@ -113,7 +112,7 @@ let sfx = {
           'assets/audios/soundBg.mp3',
        ],
        loop: true,
-       volume: 0.1
+       volume: 0.2
     }),
     soundAeroport: new Howl({
         src: [
@@ -122,6 +121,7 @@ let sfx = {
         volume: 0.3,
         onend: function() {
             count1 = 0;
+            iconAudio1.lastElementChild.classList.remove('icon__animation');     
          }
      }),
      soundAvion: new Howl({
@@ -131,15 +131,21 @@ let sfx = {
         volume: 0.4,
         onend: function() {
             count2 = 0;
+            iconAudio2.forEach(element => {
+                element.lastElementChild.classList.remove('icon__animation');  
+            });
          }
      }),
      soundCrash: new Howl({
         src: [
            'assets/audios/soundCrash.mp3'
         ],
-        volume: 0.6,
+        volume: 0.7,
         onend: function() {
             count3 = 0;
+            iconAudio3.forEach(element => {
+                element.lastElementChild.classList.remove('icon__animation');  
+            });
          }
      }),
      soundReveil: new Howl({
@@ -194,120 +200,106 @@ document.querySelector(".icon--sound").addEventListener("click", () => {
     } 
 });
 
-let audio = document.querySelector(".audio");
-let count1 = 0;
 
-document.querySelector(".icon--audio1").addEventListener("click", () => {    
+let iconAudio1 = document.querySelector(".icon--audio1");
+let count1 = 0;
+iconAudio1.addEventListener("click", () => {    
     if(count1 == 0){
         count1 = 1;
-        sfx.soundAeroport.play();       
+        sfx.soundAeroport.play();
+        iconAudio1.lastElementChild.classList.add('icon__animation');     
     }else{
         count1 = 0;        
-        sfx.soundAeroport.pause(); 
+        sfx.soundAeroport.pause();
+        iconAudio1.lastElementChild.classList.remove('icon__animation');         
     } 
 });
+let iconAudio2 = document.querySelectorAll(".icon--audio2");
 let count2 = 0;
-document.querySelectorAll('.icon--audio2').forEach(item => {
+iconAudio2.forEach(item => {
     item.addEventListener('click', () => {
         if(count2 == 0){
             count2 = 1;
-            sfx.soundAvion.play();           
+            sfx.soundAvion.play(); 
+            item.lastElementChild.classList.add('icon__animation');            
         }else{
             count2 = 0;        
             sfx.soundAvion.pause(); 
+            item.lastElementChild.classList.remove('icon__animation');  
         }   
     });
 });
+let iconAudio3 = document.querySelectorAll(".icon--audio3");
 let count3 = 0;
-document.querySelectorAll('.icon--audio3').forEach(item => {
+iconAudio3.forEach(item => {
     item.addEventListener('click', () => {        
         if(count3 == 0){
             count3 = 1;
-            sfx.soundCrash.play();           
+            sfx.soundCrash.play(); 
+            item.lastElementChild.classList.add('icon__animation');          
         }else{
             count3 = 0;        
             sfx.soundCrash.pause(); 
+            item.lastElementChild.classList.remove('icon__animation');
         }    
     });
 });
+let iconAudio4 = document.querySelector(".icon--audio4");
 let count4 = 0;
-document.querySelector(".icon--audio4").addEventListener("click", () => {    
+iconAudio4.addEventListener("click", () => {    
     if(count4 == 0){
         count4 = 1;
-        sfx.soundReveil.play();           
+        sfx.soundReveil.play();
+        iconAudio4.lastElementChild.classList.add('icon__animation');           
     }else{
         count4 = 0;        
         sfx.soundReveil.pause(); 
+        iconAudio4.lastElementChild.classList.remove('icon__animation');
     }  
 });
+let iconAudio5 = document.querySelector(".icon--audio5");
 let count5 = 0;
-document.querySelector(".icon--audio5").addEventListener("click", () => {    
+iconAudio5.addEventListener("click", () => {    
     if(count5 == 0){
         count5 = 1;
-        sfx.soundAvalanche.play();           
+        sfx.soundAvalanche.play();  
+        iconAudio5.lastElementChild.classList.add('icon__animation');          
     }else{
         count5 = 0;        
         sfx.soundAvalanche.pause(); 
+        iconAudio5.lastElementChild.classList.remove('icon__animation'); 
     }    
 });
+let iconAudio6 = document.querySelector(".icon--audio6");
 let count6 = 0;
-document.querySelector(".icon--audio6").addEventListener("click", () => {    
+iconAudio6.addEventListener("click", () => {    
     if(count6 == 0){
         count6 = 1;
-        sfx.soundRiviere.play();           
+        sfx.soundRiviere.play();
+        iconAudio6.lastElementChild.classList.add('icon__animation');              
     }else{
         count6 = 0;        
         sfx.soundRiviere.pause(); 
+        iconAudio6.lastElementChild.classList.remove('icon__animation');   
     }  
 });
+
 
 // Les modals //
 
 const modalBg = document.querySelectorAll(".modal-bg");
 document.querySelectorAll('.icon--photo').forEach(item => {
     item.addEventListener('click', () => {
-        modalBg.forEach(element => (element).classList.add('active'));
+        modalBg.forEach(element => element.classList.add('active'));
     });
 });
 document.querySelectorAll('.icon--close').forEach(item => {
     item.addEventListener('click', () => {
-        modalBg.forEach(element => (element).classList.remove('active'));
+        modalBg.forEach(element => element.classList.remove('active'));
     });
 });
 
 // Les videos //
-
-const video1 = document.querySelector(".video--1");
-const video2 = document.querySelector(".video--2");
-const video3 = document.querySelector(".video--3");
-const video3Mort = document.querySelector(".video--3-mort");
-const video4 = document.querySelector(".video--4");
-const video4Mort = document.querySelector(".video--4-mort");
-const video5 = document.querySelector(".video--5");
-const video5Mort = document.querySelector(".video--5-mort");
-const video6 = document.querySelector(".video--6");
-const video7 = document.querySelector(".video--7");
-const video8 = document.querySelector(".video--8");
-const video9 = document.querySelector(".video--9");
-const video10 = document.querySelector(".video--10");
-const video11 = document.querySelector(".video--11");
-const video12 = document.querySelector(".video--12");
-const video13 = document.querySelector(".video--13");
-const video14 = document.querySelector(".video--14");
-const video15 = document.querySelector(".video--15");
-const video16 = document.querySelector(".video--16");
-const video17 = document.querySelector(".video--17");
-const video18 = document.querySelector(".video--18");
-const video19 = document.querySelector(".video--19");
-const video20 = document.querySelector(".video--20");
-const video21 = document.querySelector(".video--21");
-const video22 = document.querySelector(".video--22");
-const videoMort1 = document.querySelector(".video--mort1");
-const videoMort2 = document.querySelector(".video--mort2");
-const videoMort3 = document.querySelector(".video--mort3");
-
-
-
 
 const circle1= document.querySelector(".circle--1");
 const circle2 = document.querySelector(".circle--2");
@@ -317,64 +309,14 @@ btnNext.addEventListener("click", startVideo);
 circle1.addEventListener("click", startVideo);
 circle2.addEventListener("click", startVideo);
 
+const page = document.querySelectorAll(".page--video");
+
 function startVideo() {
-    if(document.querySelector(".page--video1").classList.contains('page--show')){
-        video1.play();
-    }else if(document.querySelector(".page--video2").classList.contains('page--show')){
-        video2.play();
-    }else if(document.querySelector(".page--video3").classList.contains('page--show')){
-        video3.play();
-    }else if(document.querySelector(".page--video3-mort").classList.contains('page--show')){
-        video3Mort.play();
-    }else if(document.querySelector(".page--video4").classList.contains('page--show')){
-        video4.play();
-    }else if(document.querySelector(".page--video4-mort").classList.contains('page--show')){
-        video4Mort.play();
-    }else if(document.querySelector(".page--video5").classList.contains('page--show')){
-        video5.play();
-    }else if(document.querySelector(".page--video5-mort").classList.contains('page--show')){
-        video5Mort.play();
-    }else if(document.querySelector(".page--video6").classList.contains('page--show')){
-        video6.play();
-    }else if(document.querySelector(".page--video7").classList.contains('page--show')){
-        video7.play();
-    }else if(document.querySelector(".page--video8").classList.contains('page--show')){
-        video8.play();
-    }else if(document.querySelector(".page--video9").classList.contains('page--show')){
-        video9.play();
-    }else if(document.querySelector(".page--video10").classList.contains('page--show')){
-        video10.play();
-    }else if(document.querySelector(".page--video11").classList.contains('page--show')){
-        video11.play();
-    }else if(document.querySelector(".page--video12").classList.contains('page--show')){
-        video12.play();
-    }else if(document.querySelector(".page--video13").classList.contains('page--show')){
-        video13.play();
-    }else if(document.querySelector(".page--video14").classList.contains('page--show')){
-        video14.play();
-    }else if(document.querySelector(".page--video15").classList.contains('page--show')){
-        video15.play();
-    }else if(document.querySelector(".page--video16").classList.contains('page--show')){
-        video16.play();
-    }else if(document.querySelector(".page--video17").classList.contains('page--show')){
-        video17.play();
-    }else if(document.querySelector(".page--video18").classList.contains('page--show')){
-        video18.play();
-    }else if(document.querySelector(".page--video19").classList.contains('page--show')){
-        video19.play();
-    }else if(document.querySelector(".page--video20").classList.contains('page--show')){
-        video20.play();
-    }else if(document.querySelector(".page--video21").classList.contains('page--show')){
-        video21.play();
-    }else if(document.querySelector(".page--video22").classList.contains('page--show')){
-        video22.play();
-    }else if(document.querySelector(".page--mort1").classList.contains('page--show')){
-        videoMort1.play();
-    }else if(document.querySelector(".page--mort2").classList.contains('page--show')){
-        videoMort2.play();
-    }else if(document.querySelector(".page--mort3").classList.contains('page--show')){
-        videoMort3.play();
-    }    
+    for (let i = 0; i < page.length; i++) {
+        if(page[i].classList.contains('page--show')){
+            page[i].lastElementChild.play();
+        }
+    } 
 }
 
 // Copyright date //
