@@ -154,6 +154,7 @@ let sfx = {
         ],
         onend: function() {
             count4 = 0;
+            iconAudio4.lastElementChild.classList.remove('icon__animation');   
          }
      }),
      soundAvalanche: new Howl({
@@ -163,6 +164,7 @@ let sfx = {
         volume: 0.8,
         onend: function() {
             count5 = 0;
+            iconAudio5.lastElementChild.classList.remove('icon__animation');   
          }
      }),
      soundRiviere: new Howl({
@@ -172,6 +174,7 @@ let sfx = {
         volume: 0.8,
         onend: function() {
             count6 = 0;
+            iconAudio6.lastElementChild.classList.remove('icon__animation');   
          }
      })
 };
