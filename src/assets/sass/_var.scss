@@ -1,6 +1,20 @@
-:root {
-  --color-black: #1a1a1a;
-  --color-dark-gray: #303030;
-  --color-gray: #656565;
-  --color-white: #f2efe7;
+:root{ 
+
+--fw-regular: 400;
+--fw-semi-bold: 500;
+--fw-bold: 700;
+
+--fs-300: .8125rem;
+--fs-400: .875rem;
+--fs-500: 1rem;
+--fs-600: 1.875rem;
+--fs-700: 2.5rem;
+
+}
+
+@media (min-width:50em){
+    :root{
+        --fs-600: 2.5rem;
+        --fs-700: 3.5rem;  
+    }
 }
