@@ -1,20 +1,17 @@
 :root{ 
 
---fw-regular: 400;
---fw-semi-bold: 500;
---fw-bold: 700;
+--font-color-light:#FFFFFF;
+--font-color-light2:#ADBDCC;
+--font-color-dark:#425466;
+--font-color-dark2:#0A2540;
 
---fs-300: .8125rem;
---fs-400: .875rem;
---fs-500: 1rem;
---fs-600: 1.875rem;
---fs-700: 2.5rem;
+--primary-color: #635BFF;
+--secondary-color: #00D4FF;
+
+--bg-color-light: #FFFFFF;
+--bg-color-light2: #F6F9FC;
+--bg-color-dark: #0A2540;   
+--bg-color-dark2: #0C2B4B;     
 
 }
 
-@media (min-width:50em){
-    :root{
-        --fs-600: 2.5rem;
-        --fs-700: 3.5rem;  
-    }
-}

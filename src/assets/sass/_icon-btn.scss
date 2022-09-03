@@ -1,2 +1,161 @@
 @use "_var.scss";
 
+
+/* Icon & image */
+.illustration{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3rem;    
+}
+.logo{
+    height: 1.5rem;    
+    z-index: 10;
+}
+.icon--tool{
+    width: 4rem;
+    margin-bottom: 1rem;    
+}
+.icon--send{
+    width: 1rem;
+    margin-left: .5rem;
+    margin-bottom: .5px;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);  
+}
+.project__background{
+    width: 100%;
+    height: 40vh;
+    background-color: var(--bg-color-dark2);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.project__image{
+    width: 90%;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project__background:hover .project__image,
+.project__background:focus .project__image{
+    transform: scale(1.05);
+}
+.icons--social{
+    width: 1.5rem;
+    height: 1.5rem;   
+}
+.icons--social path{
+    transition: fill .3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.icons--social:hover path,
+.icons--social:focus path{
+    fill: var(--primary-color);
+}
+.icon--scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mouse{
+    width: 1rem;
+    height: 2rem;
+    border: 2px solid var(--font-color-dark2);
+    border-radius: 2rem;
+    margin-bottom: .25rem;
+    display: flex;
+}
+.mouse span{
+    width: .5rem;
+    height: .5rem;
+    background-color: var(--font-color-dark2);
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-mouse 1.5s linear infinite;
+}
+.arrow span{
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    border: 2px solid transparent;
+    border-right-color: var(--font-color-dark2);
+    border-bottom-color: var(--font-color-dark2);
+    transform: rotate(45deg);
+    animation: move-arrow 1.5s alternate infinite;
+}
+
+/* Link & btn */
+a{
+    text-decoration: none;
+    color: var(--font-color-dark2);    
+}
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .5px;
+    background-color: var(--primary-color);
+    color: var(--font-color-light);
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    text-align: center;  
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);      
+}
+.btn--contact:hover,
+.btn--contact:focus{
+    background-color: var(--bg-color-dark2);
+    border: 2px solid var(--bg-color-dark2); 
+}
+.btn--more{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--font-color-dark2);
+}
+.btn--more:hover,
+.btn--more:focus{
+    background-color: var(--bg-color-light);
+    border: 2px solid var(--bg-color-light); 
+}
+.lnk{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .5px;
+    display: inline-block;
+    transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);   
+    color: var(--font-color-dark2);  
+}
+.nav__link a{
+    display:inline-block;
+    overflow: hidden;
+}
+.nav__link a span{
+    display: inline-block;
+    position:relative;
+    transition: transform 500ms;    
+}
+.nav__link a span:after{
+    content: attr(data-hover);
+    position: absolute;
+    top: -30px;
+    left:0;
+    transform: translate3d(0,0,0);
+}
+.nav__link a:hover span,
+.nav__link a:focus span {
+    transform: translateY(30px);
+}
+.link--work:hover .icon--send,
+.link--work:focus .icon--send{
+    transform: translateX(.5rem);
+}
+
+
+@media (min-width: 1025px){
+    .project__background{
+        width: 100%;
+        height: 60vh;
+    }
+}

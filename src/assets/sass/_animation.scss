@@ -1,1 +1,59 @@
 @use "_var.scss";
+
+
+/* Animations */
+.wheel{
+    animation: wheel 8s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.wheel2{
+    animation: wheel2 8s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes wheel2{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-360deg);
+    }
+}
+@keyframes move-mouse{
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(10px);
+    }    
+}
+@keyframes move-arrow{
+    0%{
+        opacity: 0;        
+    }
+    25%{
+        opacity: .25;        
+    }
+    50%{
+        opacity: .5;        
+    }
+    75%{
+        opacity: .75;        
+    }
+    100%{
+        opacity: 1;        
+    }
+
+}
+

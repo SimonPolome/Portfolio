@@ -1,9 +1,56 @@
 @use "_var.scss";
 
-p {
-  margin: 0;
+/* Ttile & text */
+.title{
+  font-weight: 400;    
+  color: var(--font-color-dark2);
+  font-family: 'Raleway', sans-serif;
 }
-a{
-  text-decoration: none;
-  color: var(--color-white);
+.title--light{
+  color: var(--font-color-light);
+}
+.title--big{
+  font-size: 38px;
+  line-height: 40px; 
+  font-weight: 500;
+}
+.title--medium{
+  font-size: 28px;
+  line-height: 32px;   
+}
+.title--small{
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.title__home--small{    
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--primary-color);
+}
+p{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--font-color-dark);
+  font-family: 'Roboto', sans-serif;
+}
+.text--light{
+  color: var(--font-color-light2);
+}
+.title--deco{
+  position: relative;    
+}
+.title--deco::before{
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: var(--font-color-dark);
+}
+.title--contact{
+  font-weight: 700;
 }
