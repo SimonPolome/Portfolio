@@ -54,6 +54,17 @@
     100%{
         opacity: 1;        
     }
-
 }
 
+.nav.active{
+    animation: bgAnimation .5s ease-in-out;    
+}
+
+@keyframes bgAnimation{
+    0%{
+        opacity: 0;        
+    }
+    100%{
+        opacity: 1;        
+    }
+}

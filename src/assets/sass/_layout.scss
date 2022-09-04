@@ -69,10 +69,11 @@ header{
 }
 .menu{
   display: flex;
+  align-items: flex-end;
   flex-direction: column; 
   z-index: 10;              
 }
-.menu__line{
+.menu__line{  
   width: 2rem;
   height: 0.25rem;
   border-radius: 50px;
@@ -80,7 +81,7 @@ header{
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .menu__line--top{
-  margin-bottom: 0.25rem;    
+  margin-bottom: 0.25rem;   
 }
 .menu__line--bottom{
   margin-top: 0.25rem;
@@ -96,12 +97,12 @@ header{
   z-index: 5;      
 }
 .menu__line--top.active{    
-  transform-origin: top right;
-  transform: scaleX(1.2);
+  transform-origin: right;
+  transform: scaleX(0.8);
 }
 .menu__line--bottom.active{    
-  transform-origin: top right;
-  transform: scaleX(0.8);
+  transform-origin: right;
+  transform: scaleX(1.2);
 }
 main.active{
   display: none;
