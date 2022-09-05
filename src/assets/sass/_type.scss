@@ -42,7 +42,10 @@ p{
   color: var(--font-color-light2);
 }
 .title--deco{
-  position: relative;    
+  position: relative;  
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);  
 }
 .title--deco::before{
   position: absolute;

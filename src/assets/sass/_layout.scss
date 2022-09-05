@@ -49,6 +49,8 @@ body{
   background-color: var(--font-color-light);
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  opacity: 0;
+  transform: translateY(100px);  
 }
 
 /* Nav & list */
@@ -140,9 +142,19 @@ main.active{
 /* Layout */
 .title__home--small{
   margin-bottom: .5rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);
 }
 .title__home--big{
   margin-bottom: 1rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);
+}
+.cta--home{
+  opacity: 0;
+  transform: translateY(5px);
 }
 .text--home{
   margin-bottom: 3rem;
@@ -159,9 +171,15 @@ main.active{
 }
 .title--works{
   margin-bottom: .5rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);  
 }
 .text--works{
   margin-bottom: 2rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);  
 }
 .works__project{
   margin-bottom: 5rem;
@@ -171,12 +189,21 @@ main.active{
 }
 .title--about{
   margin-bottom: .5rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);  
 }
 .text--about{
   margin-bottom: .5rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);  
 }
 .text--about2{
   margin-bottom: 2rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(30px);  
 }
 .title--contact{
   margin-bottom: 1rem;
@@ -255,7 +282,7 @@ header{
 .title__home--big{
   margin-bottom: 1.5rem;
 }
-.btn__home--contact{
+.btn__about--contact{
   margin: 0;
 }
 .works__project{
