@@ -104,3 +104,4 @@ tlAbout.to('.title--about', {'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 
 .to('.text--about', {'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0}, "-=1.3")
 .to('.text--about2', {'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0}, "-=1.3")
 .to('.btn__about--contact', {opacity: 1, duration: 1, y: 0}, "-=1")
+
